@@ -1,0 +1,11 @@
+para ejecutar sonarqube:
+sh /opt/sonarqube/bin/linux-x86-64/sonar.sh console
+
+para ejecutar pmd:
+/opt/pmd/bin/run.sh pmd -d /home/alumno/Escritorio/Shopping/src/java/sonphse/ -R rulesets/java/quickstart.xml -f text
+
+para ejecutar findbugs:
+/opt/findbugs/bin/findbugs
+-> se abre una GUI
+
+
