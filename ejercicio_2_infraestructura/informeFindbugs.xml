@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1613413080755" analysisTimestamp="1614019221071" release="">
+  <Project projectName="InformeFindbugs2">
+    <Jar>/home/alumno/Escritorio/Shopping/build/web/WEB-INF/classes</Jar>
+    <Jar>/home/alumno/Escritorio/Shopping/dist/WorkShop1.war</Jar>
+    <Jar>/home/alumno/Escritorio/Shopping/lib/CopyLibs/org-netbeans-modules-java-j2seproject-copylibstask.jar</Jar>
+    <Jar>/home/alumno/Escritorio/Shopping/lib/javaee-endorsed-api-6.0/javaee-doc-api.jar</Jar>
+    <Jar>/home/alumno/Escritorio/Shopping/lib/javaee-endorsed-api-6.0/javax.annotation.jar</Jar>
+    <Jar>/home/alumno/Escritorio/Shopping/lib/javaee-endorsed-api-6.0/jaxb-api-osgi.jar</Jar>
+    <Jar>/home/alumno/Escritorio/Shopping/lib/javaee-endorsed-api-6.0/webservices-api-osgi.jar</Jar>
+    <AuxClasspathEntry>/home/alumno/Escritorio/Shopping</AuxClasspathEntry>
+    <SrcDir>/home/alumno/Escritorio/Shopping</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.appengine.findbugs-cloud" online="true" detailsUrl="http://findbugs-cloud.appspot.com/issues/%s?embed"></Cloud>
+  </Project>
+  <BugInstance type="NP_IMMEDIATE_DEREFERENCE_OF_READLINE" priority="2" rank="15" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.ContextFinder">
+      <SourceLine classname="javax.xml.bind.ContextFinder" sourcefile="ContextFinder.java" sourcepath="javax/xml/bind/ContextFinder.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.ContextFinder" name="find" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;Ljava/util/Map;)Ljavax/xml/bind/JAXBContext;" isStatic="true">
+      <SourceLine classname="javax.xml.bind.ContextFinder" start="225" end="289" startBytecode="0" endBytecode="711" sourcefile="ContextFinder.java" sourcepath="javax/xml/bind/ContextFinder.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.bind.ContextFinder" start="274" end="274" startBytecode="260" endBytecode="260" sourcefile="ContextFinder.java" sourcepath="javax/xml/bind/ContextFinder.java"/>
+  </BugInstance>
+  <BugInstance type="NP_IMMEDIATE_DEREFERENCE_OF_READLINE" priority="2" rank="15" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.ContextFinder">
+      <SourceLine classname="javax.xml.bind.ContextFinder" sourcefile="ContextFinder.java" sourcepath="javax/xml/bind/ContextFinder.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.ContextFinder" name="find" signature="([Ljava/lang/Class;Ljava/util/Map;)Ljavax/xml/bind/JAXBContext;" isStatic="true">
+      <SourceLine classname="javax.xml.bind.ContextFinder" start="297" end="375" startBytecode="0" endBytecode="932" sourcefile="ContextFinder.java" sourcepath="javax/xml/bind/ContextFinder.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.bind.ContextFinder" start="361" end="361" startBytecode="411" endBytecode="411" sourcefile="ContextFinder.java" sourcepath="javax/xml/bind/ContextFinder.java"/>
+  </BugInstance>
+  <BugInstance type="LI_LAZY_INIT_STATIC" priority="3" rank="17" abbrev="LI" category="MT_CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.DatatypeConverter">
+      <SourceLine classname="javax.xml.bind.DatatypeConverter" sourcefile="DatatypeConverter.java" sourcepath="javax/xml/bind/DatatypeConverter.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.DatatypeConverter" name="setDatatypeConverter" signature="(Ljavax/xml/bind/DatatypeConverterInterface;)V" isStatic="true">
+      <SourceLine classname="javax.xml.bind.DatatypeConverter" start="108" end="117" startBytecode="0" endBytecode="19" sourcefile="DatatypeConverter.java" sourcepath="javax/xml/bind/DatatypeConverter.java"/>
+    </Method>
+    <Field classname="javax.xml.bind.DatatypeConverter" name="theConverter" signature="Ljavax/xml/bind/DatatypeConverterInterface;" isStatic="true" role="FIELD_ON">
+      <SourceLine classname="javax.xml.bind.DatatypeConverter" sourcefile="DatatypeConverter.java" sourcepath="javax/xml/bind/DatatypeConverter.java"/>
+    </Field>
+    <SourceLine classname="javax.xml.bind.DatatypeConverter" start="111" end="115" startBytecode="17" endBytecode="39" sourcefile="DatatypeConverter.java" sourcepath="javax/xml/bind/DatatypeConverter.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.DatatypeConverterImpl">
+      <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.DatatypeConverterImpl" name="_parseLong" signature="(Ljava/lang/CharSequence;)J" isStatic="true">
+      <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" start="103" end="103" startBytecode="0" endBytecode="58" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+    </Method>
+    <Method classname="java.lang.Long" name="longValue" signature="()J" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Long"/>
+    </Method>
+    <Method classname="java.lang.Long" name="parseLong" signature="(Ljava/lang/String;)J" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" start="103" end="103" startBytecode="13" endBytecode="13" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+  </BugInstance>
+  <BugInstance type="FE_TEST_IF_EQUAL_TO_NOT_A_NUMBER" priority="1" rank="6" abbrev="FE" category="CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.DatatypeConverterImpl">
+      <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.DatatypeConverterImpl" name="_printDouble" signature="(D)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" start="435" end="438" startBytecode="0" endBytecode="91" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" start="435" end="435" startBytecode="4" endBytecode="4" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+  </BugInstance>
+  <BugInstance type="FE_TEST_IF_EQUAL_TO_NOT_A_NUMBER" priority="1" rank="6" abbrev="FE" category="CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.DatatypeConverterImpl">
+      <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.DatatypeConverterImpl" name="_printFloat" signature="(F)Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" start="182" end="185" startBytecode="0" endBytecode="88" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.bind.DatatypeConverterImpl" start="182" end="182" startBytecode="3" endBytecode="3" sourcefile="DatatypeConverterImpl.java" sourcepath="javax/xml/bind/DatatypeConverterImpl.java"/>
+  </BugInstance>
+  <BugInstance type="UG_SYNC_SET_UNSYNC_GET" priority="2" rank="14" abbrev="UG" category="MT_CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.JAXBException">
+      <SourceLine classname="javax.xml.bind.JAXBException" sourcefile="JAXBException.java" sourcepath="javax/xml/bind/JAXBException.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.JAXBException" name="getLinkedException" signature="()Ljava/lang/Throwable;" isStatic="false">
+      <SourceLine classname="javax.xml.bind.JAXBException" start="106" end="106" startBytecode="0" endBytecode="46" sourcefile="JAXBException.java" sourcepath="javax/xml/bind/JAXBException.java"/>
+    </Method>
+    <Method classname="javax.xml.bind.JAXBException" name="setLinkedException" signature="(Ljava/lang/Throwable;)V" isStatic="false">
+      <SourceLine classname="javax.xml.bind.JAXBException" start="117" end="118" startBytecode="0" endBytecode="61" sourcefile="JAXBException.java" sourcepath="javax/xml/bind/JAXBException.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="UG_SYNC_SET_UNSYNC_GET" priority="2" rank="14" abbrev="UG" category="MT_CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.TypeConstraintException">
+      <SourceLine classname="javax.xml.bind.TypeConstraintException" sourcefile="TypeConstraintException.java" sourcepath="javax/xml/bind/TypeConstraintException.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.TypeConstraintException" name="getLinkedException" signature="()Ljava/lang/Throwable;" isStatic="false">
+      <SourceLine classname="javax.xml.bind.TypeConstraintException" start="114" end="114" startBytecode="0" endBytecode="46" sourcefile="TypeConstraintException.java" sourcepath="javax/xml/bind/TypeConstraintException.java"/>
+    </Method>
+    <Method classname="javax.xml.bind.TypeConstraintException" name="setLinkedException" signature="(Ljava/lang/Throwable;)V" isStatic="false">
+      <SourceLine classname="javax.xml.bind.TypeConstraintException" start="125" end="126" startBytecode="0" endBytecode="61" sourcefile="TypeConstraintException.java" sourcepath="javax/xml/bind/TypeConstraintException.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="PZLA_PREFER_ZERO_LENGTH_ARRAYS" priority="3" rank="20" abbrev="PZLA" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.bind.annotation.adapters.HexBinaryAdapter">
+      <SourceLine classname="javax.xml.bind.annotation.adapters.HexBinaryAdapter" sourcefile="HexBinaryAdapter.java" sourcepath="javax/xml/bind/annotation/adapters/HexBinaryAdapter.java"/>
+    </Class>
+    <Method classname="javax.xml.bind.annotation.adapters.HexBinaryAdapter" name="unmarshal" signature="(Ljava/lang/String;)[B" isStatic="false">
+      <SourceLine classname="javax.xml.bind.annotation.adapters.HexBinaryAdapter" start="21" end="22" startBytecode="0" endBytecode="66" sourcefile="HexBinaryAdapter.java" sourcepath="javax/xml/bind/annotation/adapters/HexBinaryAdapter.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.bind.annotation.adapters.HexBinaryAdapter" start="21" end="21" startBytecode="5" endBytecode="5" sourcefile="HexBinaryAdapter.java" sourcepath="javax/xml/bind/annotation/adapters/HexBinaryAdapter.java"/>
+  </BugInstance>
+  <BugInstance type="CI_CONFUSED_INHERITANCE" priority="3" rank="20" abbrev="CI" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.ws.soap.AddressingFeature">
+      <SourceLine classname="javax.xml.ws.soap.AddressingFeature" sourcefile="AddressingFeature.java" sourcepath="javax/xml/ws/soap/AddressingFeature.java"/>
+    </Class>
+    <Field classname="javax.xml.ws.soap.AddressingFeature" name="required" signature="Z" isStatic="false">
+      <SourceLine classname="javax.xml.ws.soap.AddressingFeature" sourcefile="AddressingFeature.java" sourcepath="javax/xml/ws/soap/AddressingFeature.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="CI_CONFUSED_INHERITANCE" priority="3" rank="20" abbrev="CI" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.ws.soap.MTOMFeature">
+      <SourceLine classname="javax.xml.ws.soap.MTOMFeature" sourcefile="MTOMFeature.java" sourcepath="javax/xml/ws/soap/MTOMFeature.java"/>
+    </Class>
+    <Field classname="javax.xml.ws.soap.MTOMFeature" name="threshold" signature="I" isStatic="false">
+      <SourceLine classname="javax.xml.ws.soap.MTOMFeature" sourcefile="MTOMFeature.java" sourcepath="javax/xml/ws/soap/MTOMFeature.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="3" rank="20" abbrev="REC" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.ws.spi.FactoryFinder">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Class>
+    <Method classname="javax.xml.ws.spi.FactoryFinder" name="find" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;" isStatic="true">
+      <SourceLine classname="javax.xml.ws.spi.FactoryFinder" start="66" end="128" startBytecode="0" endBytecode="674" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    </Method>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder" start="93" end="93" startBytecode="129" endBytecode="129" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java"/>
+    <SourceLine classname="javax.xml.ws.spi.FactoryFinder" start="109" end="109" startBytecode="237" endBytecode="237" sourcefile="FactoryFinder.java" sourcepath="javax/xml/ws/spi/FactoryFinder.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.ws.spi.http.HttpContext">
+      <SourceLine classname="javax.xml.ws.spi.http.HttpContext" sourcefile="HttpContext.java" sourcepath="javax/xml/ws/spi/http/HttpContext.java"/>
+    </Class>
+    <Field classname="javax.xml.ws.spi.http.HttpContext" name="handler" signature="Ljavax/xml/ws/spi/http/HttpHandler;" isStatic="false">
+      <SourceLine classname="javax.xml.ws.spi.http.HttpContext" sourcefile="HttpContext.java" sourcepath="javax/xml/ws/spi/http/HttpContext.java"/>
+    </Field>
+    <SourceLine classname="javax.xml.ws.spi.http.HttpContext" start="35" end="35" startBytecode="2" endBytecode="2" sourcefile="HttpContext.java" sourcepath="javax/xml/ws/spi/http/HttpContext.java"/>
+  </BugInstance>
+  <BugInstance type="CI_CONFUSED_INHERITANCE" priority="3" rank="20" abbrev="CI" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="javax.xml.ws.wsaddressing.W3CEndpointReference">
+      <SourceLine classname="javax.xml.ws.wsaddressing.W3CEndpointReference" sourcefile="W3CEndpointReference.java" sourcepath="javax/xml/ws/wsaddressing/W3CEndpointReference.java"/>
+    </Class>
+    <Field classname="javax.xml.ws.wsaddressing.W3CEndpointReference" name="NS" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="javax.xml.ws.wsaddressing.W3CEndpointReference" sourcefile="W3CEndpointReference.java" sourcepath="javax/xml/ws/wsaddressing/W3CEndpointReference.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Class>
+    <Method classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="179" end="260" startBytecode="0" endBytecode="1660" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter"/>
+    </Method>
+    <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="204" end="204" startBytecode="255" endBytecode="255" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Class>
+    <Method classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="179" end="260" startBytecode="0" endBytecode="1660" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Method>
+    <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+    </Method>
+    <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="202" end="202" startBytecode="241" endBytecode="241" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Class>
+    <Method classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="179" end="260" startBytecode="0" endBytecode="1660" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Method>
+    <Method classname="java.io.File" name="delete" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+    </Method>
+    <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="242" end="242" startBytecode="729" endBytecode="729" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+  </BugInstance>
+  <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Class>
+    <Method classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" name="execute" signature="()V" isStatic="false">
+      <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="179" end="260" startBytecode="0" endBytecode="1660" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+    </Method>
+    <Method classname="java.io.File" name="mkdir" signature="()Z" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.File"/>
+    </Method>
+    <SourceLine classname="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" start="215" end="215" startBytecode="427" endBytecode="427" sourcefile="CopyLibs.java" sourcepath="org/netbeans/modules/java/j2seproject/copylibstask/CopyLibs.java"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.cart.Cart">
+      <SourceLine classname="sonphse.cart.Cart" start="21" end="89" sourcefile="Cart.java" sourcepath="sonphse/cart/Cart.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.cart.Item">
+      <SourceLine classname="sonphse.cart.Item" start="19" end="56" sourcefile="Item.java" sourcepath="sonphse/cart/Item.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.mobile.MobileDTO">
+      <SourceLine classname="sonphse.mobile.MobileDTO" start="23" end="132" sourcefile="MobileDTO.java" sourcepath="sonphse/mobile/MobileDTO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.mobile.MobileInsertError">
+      <SourceLine classname="sonphse.mobile.MobileInsertError" start="23" end="132" sourcefile="MobileInsertError.java" sourcepath="sonphse/mobile/MobileInsertError.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.mobile.MobileSearchUserError">
+      <SourceLine classname="sonphse.mobile.MobileSearchUserError" start="18" end="52" sourcefile="MobileSearchUserError.java" sourcepath="sonphse/mobile/MobileSearchUserError.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.mobile.MobileUpdateError">
+      <SourceLine classname="sonphse.mobile.MobileUpdateError" start="19" end="68" sourcefile="MobileUpdateError.java" sourcepath="sonphse/mobile/MobileUpdateError.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="NM_CONFUSING" priority="3" rank="19" abbrev="Nm" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.order.OrderDAO">
+      <SourceLine classname="sonphse.order.OrderDAO" sourcefile="OrderDAO.java" sourcepath="sonphse/order/OrderDAO.java"/>
+    </Class>
+    <Method classname="sonphse.order.OrderDAO" name="getOrderID" signature="()I" isStatic="false">
+      <SourceLine classname="sonphse.order.OrderDAO" start="30" end="30" startBytecode="0" endBytecode="46" sourcefile="OrderDAO.java" sourcepath="sonphse/order/OrderDAO.java"/>
+    </Method>
+    <Class classname="sonphse.orderdetail.OrderDetailDTO">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDTO" sourcefile="OrderDetailDTO.java" sourcepath="sonphse/orderdetail/OrderDetailDTO.java"/>
+    </Class>
+    <Method classname="sonphse.orderdetail.OrderDetailDTO" name="getOrderId" signature="()I" isStatic="false">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDTO" start="48" end="48" startBytecode="0" endBytecode="46" sourcefile="OrderDetailDTO.java" sourcepath="sonphse/orderdetail/OrderDetailDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.order.OrderDAO">
+      <SourceLine classname="sonphse.order.OrderDAO" start="25" end="174" sourcefile="OrderDAO.java" sourcepath="sonphse/order/OrderDAO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.order.OrderDTO">
+      <SourceLine classname="sonphse.order.OrderDTO" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Class>
+    <Method classname="sonphse.order.OrderDTO" name="getOrderDate" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="sonphse.order.OrderDTO" start="61" end="61" startBytecode="0" endBytecode="46" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Method>
+    <Field classname="sonphse.order.OrderDTO" name="orderDate" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="sonphse.order.OrderDTO" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Field>
+    <SourceLine classname="sonphse.order.OrderDTO" start="61" end="61" startBytecode="4" endBytecode="4" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.order.OrderDTO">
+      <SourceLine classname="sonphse.order.OrderDTO" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Class>
+    <Method classname="sonphse.order.OrderDTO" name="&lt;init&gt;" signature="(ILjava/lang/String;Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="sonphse.order.OrderDTO" start="23" end="27" startBytecode="0" endBytecode="107" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Method>
+    <Field classname="sonphse.order.OrderDTO" name="orderDate" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="sonphse.order.OrderDTO" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Field>
+    <LocalVariable name="orderDate" register="3" pc="16" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="sonphse.order.OrderDTO" start="26" end="26" startBytecode="16" endBytecode="16" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.order.OrderDTO">
+      <SourceLine classname="sonphse.order.OrderDTO" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Class>
+    <Method classname="sonphse.order.OrderDTO" name="setOrderDate" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="sonphse.order.OrderDTO" start="68" end="69" startBytecode="0" endBytecode="61" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Method>
+    <Field classname="sonphse.order.OrderDTO" name="orderDate" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="sonphse.order.OrderDTO" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Field>
+    <LocalVariable name="orderDate" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="sonphse.order.OrderDTO" start="68" end="68" startBytecode="2" endBytecode="2" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.order.OrderDTO">
+      <SourceLine classname="sonphse.order.OrderDTO" start="20" end="69" sourcefile="OrderDTO.java" sourcepath="sonphse/order/OrderDTO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.order.OrderInsertError">
+      <SourceLine classname="sonphse.order.OrderInsertError" start="17" end="36" sourcefile="OrderInsertError.java" sourcepath="sonphse/order/OrderInsertError.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.orderdetail.OrderDetailDAO">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDAO" sourcefile="OrderDetailDAO.java" sourcepath="sonphse/orderdetail/OrderDetailDAO.java"/>
+    </Class>
+    <Method classname="sonphse.orderdetail.OrderDetailDAO" name="insertOrderDetail" signature="(Ljava/util/Map;Lsonphse/order/OrderDTO;)Z" isStatic="false">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDAO" start="29" end="75" startBytecode="0" endBytecode="932" sourcefile="OrderDetailDAO.java" sourcepath="sonphse/orderdetail/OrderDetailDAO.java"/>
+    </Method>
+    <LocalVariable name="mbDto" register="10" pc="90" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="sonphse.mobile.MobileDAO" name="getMobileById" signature="(Ljava/lang/String;)Lsonphse/mobile/MobileDTO;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="sonphse.mobile.MobileDAO" start="240" end="266" startBytecode="0" endBytecode="499" sourcefile="MobileDAO.java" sourcepath="sonphse/mobile/MobileDAO.java"/>
+    </Method>
+    <SourceLine classname="sonphse.orderdetail.OrderDetailDAO" start="42" end="42" startBytecode="92" endBytecode="92" sourcefile="OrderDetailDAO.java" sourcepath="sonphse/orderdetail/OrderDetailDAO.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.orderdetail.OrderDetailDAO">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDAO" start="26" end="75" sourcefile="OrderDetailDAO.java" sourcepath="sonphse/orderdetail/OrderDetailDAO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.orderdetail.OrderDetailDAO">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDAO" sourcefile="OrderDetailDAO.java" sourcepath="sonphse/orderdetail/OrderDetailDAO.java"/>
+    </Class>
+    <Method classname="sonphse.orderdetail.OrderDetailDAO" name="insertOrderDetail" signature="(Ljava/util/Map;Lsonphse/order/OrderDTO;)Z" isStatic="false">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDAO" start="29" end="75" startBytecode="0" endBytecode="932" sourcefile="OrderDetailDAO.java" sourcepath="sonphse/orderdetail/OrderDetailDAO.java"/>
+    </Method>
+    <SourceLine classname="sonphse.orderdetail.OrderDetailDAO" start="43" end="43" startBytecode="103" endBytecode="103" sourcefile="OrderDetailDAO.java" sourcepath="sonphse/orderdetail/OrderDetailDAO.java"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.orderdetail.OrderDetailDTO">
+      <SourceLine classname="sonphse.orderdetail.OrderDetailDTO" start="20" end="84" sourcefile="OrderDetailDTO.java" sourcepath="sonphse/orderdetail/OrderDetailDTO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.AddToCartServlet">
+      <SourceLine classname="sonphse.servlets.AddToCartServlet" sourcefile="AddToCartServlet.java" sourcepath="sonphse/servlets/AddToCartServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.AddToCartServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.AddToCartServlet" start="43" end="84" startBytecode="0" endBytecode="848" sourcefile="AddToCartServlet.java" sourcepath="sonphse/servlets/AddToCartServlet.java"/>
+    </Method>
+    <LocalVariable name="dto" register="11" pc="109" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="sonphse.mobile.MobileDAO" name="getMobileById" signature="(Ljava/lang/String;)Lsonphse/mobile/MobileDTO;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="sonphse.mobile.MobileDAO" start="240" end="266" startBytecode="0" endBytecode="499" sourcefile="MobileDAO.java" sourcepath="sonphse/mobile/MobileDAO.java"/>
+    </Method>
+    <SourceLine classname="sonphse.servlets.AddToCartServlet" start="60" end="60" startBytecode="111" endBytecode="111" sourcefile="AddToCartServlet.java" sourcepath="sonphse/servlets/AddToCartServlet.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.AddToCartServlet">
+      <SourceLine classname="sonphse.servlets.AddToCartServlet" sourcefile="AddToCartServlet.java" sourcepath="sonphse/servlets/AddToCartServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.AddToCartServlet" name="SEARCH_USER_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.AddToCartServlet" sourcefile="AddToCartServlet.java" sourcepath="sonphse/servlets/AddToCartServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.AddToCartServlet" start="30" end="30" startBytecode="7" endBytecode="7" sourcefile="AddToCartServlet.java" sourcepath="sonphse/servlets/AddToCartServlet.java"/>
+  </BugInstance>
+  <BugInstance type="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER" priority="2" rank="7" abbrev="HRS" category="SECURITY" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.DeleteMobileServlet">
+      <SourceLine classname="sonphse.servlets.DeleteMobileServlet" sourcefile="DeleteMobileServlet.java" sourcepath="sonphse/servlets/DeleteMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.DeleteMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.DeleteMobileServlet" start="39" end="77" startBytecode="0" endBytecode="703" sourcefile="DeleteMobileServlet.java" sourcepath="sonphse/servlets/DeleteMobileServlet.java"/>
+    </Method>
+    <String value="lastSearchValue" role="STRING_PARAMETER_NAME"/>
+    <SourceLine classname="sonphse.servlets.DeleteMobileServlet" start="42" end="42" startBytecode="18" endBytecode="18" sourcefile="DeleteMobileServlet.java" sourcepath="sonphse/servlets/DeleteMobileServlet.java" role="SOURCE_LINE_GENERATED_AT"/>
+    <SourceLine classname="sonphse.servlets.DeleteMobileServlet" start="55" end="55" startBytecode="155" endBytecode="155" sourcefile="DeleteMobileServlet.java" sourcepath="sonphse/servlets/DeleteMobileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.InsertMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="45" end="148" startBytecode="0" endBytecode="1748" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="description" register="6" pc="222" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="79" end="79" startBytecode="224" endBytecode="224" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="67" end="67" startBytecode="164" endBytecode="164" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.InsertMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="45" end="148" startBytecode="0" endBytecode="1748" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="mobileId" register="5" pc="187" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="75" end="75" startBytecode="189" endBytecode="189" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="67" end="67" startBytecode="159" endBytecode="159" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.InsertMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="45" end="148" startBytecode="0" endBytecode="1748" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="mobileName" register="8" pc="258" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="83" end="83" startBytecode="260" endBytecode="260" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="67" end="67" startBytecode="174" endBytecode="174" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.InsertMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="45" end="148" startBytecode="0" endBytecode="1748" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="strPrice" register="7" pc="339" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="95" end="95" startBytecode="341" endBytecode="341" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="67" end="67" startBytecode="169" endBytecode="169" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.InsertMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="45" end="148" startBytecode="0" endBytecode="1748" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="strQuanlity" register="10" pc="316" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="91" end="91" startBytecode="318" endBytecode="318" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="67" end="67" startBytecode="184" endBytecode="184" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.InsertMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="45" end="148" startBytecode="0" endBytecode="1748" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="strYear" register="9" pc="293" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="87" end="87" startBytecode="295" endBytecode="295" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="67" end="67" startBytecode="179" endBytecode="179" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.InsertMobileServlet" name="ERROR_PAGE_NOT_FOUND" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="32" end="32" startBytecode="13" endBytecode="13" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.InsertMobileServlet">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.InsertMobileServlet" name="INSERT_MOBILE_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.InsertMobileServlet" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.InsertMobileServlet" start="30" end="30" startBytecode="7" endBytecode="7" sourcefile="InsertMobileServlet.java" sourcepath="sonphse/servlets/InsertMobileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.LoginServlet">
+      <SourceLine classname="sonphse.servlets.LoginServlet" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.LoginServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.LoginServlet" start="45" end="90" startBytecode="0" endBytecode="1000" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="sonphse.servlets.LoginServlet" start="57" end="57" startBytecode="66" endBytecode="66" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.LoginServlet">
+      <SourceLine classname="sonphse.servlets.LoginServlet" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.LoginServlet" name="LOGIN_JSP_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.LoginServlet" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.LoginServlet" start="30" end="30" startBytecode="7" endBytecode="7" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.LoginServlet">
+      <SourceLine classname="sonphse.servlets.LoginServlet" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.LoginServlet" name="SEARCH_STAFF_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.LoginServlet" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.LoginServlet" start="32" end="32" startBytecode="19" endBytecode="19" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.LoginServlet">
+      <SourceLine classname="sonphse.servlets.LoginServlet" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.LoginServlet" name="SEARCH_USER_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.LoginServlet" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.LoginServlet" start="31" end="31" startBytecode="13" endBytecode="13" sourcefile="LoginServlet.java" sourcepath="sonphse/servlets/LoginServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.LogoutServlet">
+      <SourceLine classname="sonphse.servlets.LogoutServlet" sourcefile="LogoutServlet.java" sourcepath="sonphse/servlets/LogoutServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.LogoutServlet" name="ORDER_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.LogoutServlet" sourcefile="LogoutServlet.java" sourcepath="sonphse/servlets/LogoutServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.LogoutServlet" start="23" end="23" startBytecode="7" endBytecode="7" sourcefile="LogoutServlet.java" sourcepath="sonphse/servlets/LogoutServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" rank="18" abbrev="SBSC" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderProductsServlet">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.OrderProductsServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" start="54" end="112" startBytecode="0" endBytecode="1245" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Method>
+    <SourceLine classname="sonphse.servlets.OrderProductsServlet" start="81" end="81" startBytecode="230" endBytecode="230" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderProductsServlet">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderProductsServlet" name="LOGIN_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderProductsServlet" start="39" end="39" startBytecode="7" endBytecode="7" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderProductsServlet">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderProductsServlet" name="SEARCH_USER_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderProductsServlet" start="40" end="40" startBytecode="13" endBytecode="13" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderProductsServlet">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderProductsServlet" name="VIEW_CART" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderProductsServlet" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderProductsServlet" start="41" end="41" startBytecode="19" endBytecode="19" sourcefile="OrderProductsServlet.java" sourcepath="sonphse/servlets/OrderProductsServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="ADD_TO_CART_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="33" end="33" startBytecode="61" endBytecode="61" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="DELETE_MOBILE_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="29" end="29" startBytecode="37" endBytecode="37" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="ERROR_PAGE_NOT_FOUND" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="38" end="38" startBytecode="85" endBytecode="85" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="INSERT_MOBILE_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="32" end="32" startBytecode="55" endBytecode="55" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="INSERT_MOBILE_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="31" end="31" startBytecode="49" endBytecode="49" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="LOGIN_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="24" end="24" startBytecode="7" endBytecode="7" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="LOGIN_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="25" end="25" startBytecode="13" endBytecode="13" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="LOGOUT_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="26" end="26" startBytecode="19" endBytecode="19" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="ORDER_PRODUCTS_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="36" end="36" startBytecode="79" endBytecode="79" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="REMOVE_FROM_CART_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="35" end="35" startBytecode="73" endBytecode="73" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="SEARCH_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="28" end="28" startBytecode="31" endBytecode="31" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="START_UP_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="27" end="27" startBytecode="25" endBytecode="25" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="UPDATE_MOBILE_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="30" end="30" startBytecode="43" endBytecode="43" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.OrderServlet">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.OrderServlet" name="VIEW_CART" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.OrderServlet" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.OrderServlet" start="34" end="34" startBytecode="67" endBytecode="67" sourcefile="OrderServlet.java" sourcepath="sonphse/servlets/OrderServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchServlet">
+      <SourceLine classname="sonphse.servlets.SearchServlet" sourcefile="SearchServlet.java" sourcepath="sonphse/servlets/SearchServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.SearchServlet" name="SEARCH_STAFF_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchServlet" sourcefile="SearchServlet.java" sourcepath="sonphse/servlets/SearchServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.SearchServlet" start="26" end="26" startBytecode="7" endBytecode="7" sourcefile="SearchServlet.java" sourcepath="sonphse/servlets/SearchServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchServlet">
+      <SourceLine classname="sonphse.servlets.SearchServlet" sourcefile="SearchServlet.java" sourcepath="sonphse/servlets/SearchServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.SearchServlet" name="SEARCH_USER_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchServlet" sourcefile="SearchServlet.java" sourcepath="sonphse/servlets/SearchServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.SearchServlet" start="27" end="27" startBytecode="13" endBytecode="13" sourcefile="SearchServlet.java" sourcepath="sonphse/servlets/SearchServlet.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="3" rank="20" abbrev="RCN" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchStaffServlet">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.SearchStaffServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" start="46" end="92" startBytecode="0" endBytecode="874" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Method>
+    <LocalVariable name="list" register="10" pc="144" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.SearchStaffServlet" start="68" end="68" startBytecode="146" endBytecode="146" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchStaffServlet">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.SearchStaffServlet" name="LOGIN_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.SearchStaffServlet" start="33" end="33" startBytecode="19" endBytecode="19" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchStaffServlet">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.SearchStaffServlet" name="ORDER_SERVLET" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.SearchStaffServlet" start="32" end="32" startBytecode="13" endBytecode="13" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchStaffServlet">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.SearchStaffServlet" name="SEARCH_STAFF_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchStaffServlet" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.SearchStaffServlet" start="31" end="31" startBytecode="7" endBytecode="7" sourcefile="SearchStaffServlet.java" sourcepath="sonphse/servlets/SearchStaffServlet.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH" priority="2" rank="8" abbrev="NP" category="CORRECTNESS" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchUserServlet">
+      <SourceLine classname="sonphse.servlets.SearchUserServlet" sourcefile="SearchUserServlet.java" sourcepath="sonphse/servlets/SearchUserServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.SearchUserServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchUserServlet" start="43" end="88" startBytecode="0" endBytecode="988" sourcefile="SearchUserServlet.java" sourcepath="sonphse/servlets/SearchUserServlet.java"/>
+    </Method>
+    <LocalVariable name="strMin" register="5" pc="61" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.SearchUserServlet" start="56" end="56" startBytecode="63" endBytecode="63" sourcefile="SearchUserServlet.java" sourcepath="sonphse/servlets/SearchUserServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.SearchUserServlet" start="55" end="55" startBytecode="58" endBytecode="58" sourcefile="SearchUserServlet.java" sourcepath="sonphse/servlets/SearchUserServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.SearchUserServlet">
+      <SourceLine classname="sonphse.servlets.SearchUserServlet" sourcefile="SearchUserServlet.java" sourcepath="sonphse/servlets/SearchUserServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.SearchUserServlet" name="SEARCH_USER_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.SearchUserServlet" sourcefile="SearchUserServlet.java" sourcepath="sonphse/servlets/SearchUserServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.SearchUserServlet" start="30" end="30" startBytecode="7" endBytecode="7" sourcefile="SearchUserServlet.java" sourcepath="sonphse/servlets/SearchUserServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.StartupServlet">
+      <SourceLine classname="sonphse.servlets.StartupServlet" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.StartupServlet" name="LOGIN_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.StartupServlet" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.StartupServlet" start="26" end="26" startBytecode="7" endBytecode="7" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.StartupServlet">
+      <SourceLine classname="sonphse.servlets.StartupServlet" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.StartupServlet" name="SEARCH_STAFF_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.StartupServlet" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.StartupServlet" start="28" end="28" startBytecode="19" endBytecode="19" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.StartupServlet">
+      <SourceLine classname="sonphse.servlets.StartupServlet" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.StartupServlet" name="SEARCH_USER_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.StartupServlet" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.StartupServlet" start="27" end="27" startBytecode="13" endBytecode="13" sourcefile="StartupServlet.java" sourcepath="sonphse/servlets/StartupServlet.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.UpdateMobileServlet">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.UpdateMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="45" end="136" startBytecode="0" endBytecode="1478" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="description" register="8" pc="187" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="76" end="76" startBytecode="189" endBytecode="189" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="65" end="65" startBytecode="162" endBytecode="162" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.UpdateMobileServlet">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.UpdateMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="45" end="136" startBytecode="0" endBytecode="1478" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="priceStr" register="9" pc="223" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="80" end="80" startBytecode="225" endBytecode="225" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="65" end="65" startBytecode="167" endBytecode="167" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE" priority="2" rank="13" abbrev="NP" category="STYLE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.UpdateMobileServlet">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Class>
+    <Method classname="sonphse.servlets.UpdateMobileServlet" name="processRequest" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V" isStatic="false">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="45" end="136" startBytecode="0" endBytecode="1478" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Method>
+    <LocalVariable name="quanlityStr" register="10" pc="246" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="84" end="84" startBytecode="248" endBytecode="248" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="65" end="65" startBytecode="172" endBytecode="172" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java" role="SOURCE_LINE_KNOWN_NULL"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.UpdateMobileServlet">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.UpdateMobileServlet" name="ERROR_PAGE_NOT_FOUND" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="32" end="32" startBytecode="13" endBytecode="13" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.servlets.UpdateMobileServlet">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Class>
+    <Field classname="sonphse.servlets.UpdateMobileServlet" name="SEARCH_STAFF_PAGE" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="sonphse.servlets.UpdateMobileServlet" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+    </Field>
+    <SourceLine classname="sonphse.servlets.UpdateMobileServlet" start="30" end="30" startBytecode="7" endBytecode="7" sourcefile="UpdateMobileServlet.java" sourcepath="sonphse/servlets/UpdateMobileServlet.java"/>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.user.LoginError">
+      <SourceLine classname="sonphse.user.LoginError" start="18" end="52" sourcefile="LoginError.java" sourcepath="sonphse/user/LoginError.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.user.UserDAO">
+      <SourceLine classname="sonphse.user.UserDAO" start="20" end="56" sourcefile="UserDAO.java" sourcepath="sonphse/user/UserDAO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.user.UserDTO">
+      <SourceLine classname="sonphse.user.UserDTO" start="20" end="84" sourcefile="UserDTO.java" sourcepath="sonphse/user/UserDTO.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SE_NO_SERIALVERSIONID" priority="3" rank="19" abbrev="SnVI" category="BAD_PRACTICE" firstSeen="2/15/21, 6:18 PM" isInCloud="false">
+    <Class classname="sonphse.utils.DBUtils">
+      <SourceLine classname="sonphse.utils.DBUtils" start="20" end="29" sourcefile="DBUtils.java" sourcepath="sonphse/utils/DBUtils.java"/>
+    </Class>
+  </BugInstance>
+  <Errors errors="0" missingClasses="150">
+    <MissingClass>java.beans.Introspector</MissingClass>
+    <MissingClass>java.io.BufferedOutputStream</MissingClass>
+    <MissingClass>java.io.BufferedReader</MissingClass>
+    <MissingClass>java.io.File</MissingClass>
+    <MissingClass>java.io.FileInputStream</MissingClass>
+    <MissingClass>java.io.FileOutputStream</MissingClass>
+    <MissingClass>java.io.FileWriter</MissingClass>
+    <MissingClass>java.io.IOException</MissingClass>
+    <MissingClass>java.io.InputStream</MissingClass>
+    <MissingClass>java.io.InputStreamReader</MissingClass>
+    <MissingClass>java.io.OutputStream</MissingClass>
+    <MissingClass>java.io.OutputStreamWriter</MissingClass>
+    <MissingClass>java.io.PrintStream</MissingClass>
+    <MissingClass>java.io.PrintWriter</MissingClass>
+    <MissingClass>java.io.Reader</MissingClass>
+    <MissingClass>java.io.Serializable</MissingClass>
+    <MissingClass>java.io.StringWriter</MissingClass>
+    <MissingClass>java.io.UnsupportedEncodingException</MissingClass>
+    <MissingClass>java.io.Writer</MissingClass>
+    <MissingClass>java.lang.AbstractMethodError</MissingClass>
+    <MissingClass>java.lang.AssertionError</MissingClass>
+    <MissingClass>java.lang.Boolean</MissingClass>
+    <MissingClass>java.lang.CharSequence</MissingClass>
+    <MissingClass>java.lang.Class</MissingClass>
+    <MissingClass>java.lang.ClassLoader</MissingClass>
+    <MissingClass>java.lang.ClassNotFoundException</MissingClass>
+    <MissingClass>java.lang.Double</MissingClass>
+    <MissingClass>java.lang.Enum</MissingClass>
+    <MissingClass>java.lang.Error</MissingClass>
+    <MissingClass>java.lang.Exception</MissingClass>
+    <MissingClass>java.lang.Float</MissingClass>
+    <MissingClass>java.lang.IllegalAccessError</MissingClass>
+    <MissingClass>java.lang.IllegalAccessException</MissingClass>
+    <MissingClass>java.lang.IllegalArgumentException</MissingClass>
+    <MissingClass>java.lang.IllegalStateException</MissingClass>
+    <MissingClass>java.lang.Integer</MissingClass>
+    <MissingClass>java.lang.InternalError</MissingClass>
+    <MissingClass>java.lang.LinkageError</MissingClass>
+    <MissingClass>java.lang.Long</MissingClass>
+    <MissingClass>java.lang.NoClassDefFoundError</MissingClass>
+    <MissingClass>java.lang.NoSuchFieldError</MissingClass>
+    <MissingClass>java.lang.NoSuchMethodException</MissingClass>
+    <MissingClass>java.lang.NullPointerException</MissingClass>
+    <MissingClass>java.lang.NumberFormatException</MissingClass>
+    <MissingClass>java.lang.Object</MissingClass>
+    <MissingClass>java.lang.Package</MissingClass>
+    <MissingClass>java.lang.RuntimeException</MissingClass>
+    <MissingClass>java.lang.SecurityException</MissingClass>
+    <MissingClass>java.lang.SecurityManager</MissingClass>
+    <MissingClass>java.lang.String</MissingClass>
+    <MissingClass>java.lang.StringBuffer</MissingClass>
+    <MissingClass>java.lang.StringBuilder</MissingClass>
+    <MissingClass>java.lang.System</MissingClass>
+    <MissingClass>java.lang.Thread</MissingClass>
+    <MissingClass>java.lang.Throwable</MissingClass>
+    <MissingClass>java.lang.UnsatisfiedLinkError</MissingClass>
+    <MissingClass>java.lang.UnsupportedOperationException</MissingClass>
+    <MissingClass>java.lang.ref.WeakReference</MissingClass>
+    <MissingClass>java.lang.reflect.InvocationTargetException</MissingClass>
+    <MissingClass>java.lang.reflect.Method</MissingClass>
+    <MissingClass>java.math.BigDecimal</MissingClass>
+    <MissingClass>java.math.BigInteger</MissingClass>
+    <MissingClass>java.net.MalformedURLException</MissingClass>
+    <MissingClass>java.net.URI</MissingClass>
+    <MissingClass>java.net.URL</MissingClass>
+    <MissingClass>java.net.URLConnection</MissingClass>
+    <MissingClass>java.nio.charset.Charset</MissingClass>
+    <MissingClass>java.security.AccessController</MissingClass>
+    <MissingClass>java.security.BasicPermission</MissingClass>
+    <MissingClass>java.sql.Connection</MissingClass>
+    <MissingClass>java.sql.Date</MissingClass>
+    <MissingClass>java.sql.PreparedStatement</MissingClass>
+    <MissingClass>java.sql.ResultSet</MissingClass>
+    <MissingClass>java.sql.SQLException</MissingClass>
+    <MissingClass>java.text.MessageFormat</MissingClass>
+    <MissingClass>java.time.LocalDateTime</MissingClass>
+    <MissingClass>java.time.format.DateTimeFormatter</MissingClass>
+    <MissingClass>java.util.ArrayList</MissingClass>
+    <MissingClass>java.util.Calendar</MissingClass>
+    <MissingClass>java.util.Collections</MissingClass>
+    <MissingClass>java.util.Enumeration</MissingClass>
+    <MissingClass>java.util.HashMap</MissingClass>
+    <MissingClass>java.util.HashSet</MissingClass>
+    <MissingClass>java.util.Iterator</MissingClass>
+    <MissingClass>java.util.List</MissingClass>
+    <MissingClass>java.util.Map</MissingClass>
+    <MissingClass>java.util.Map$Entry</MissingClass>
+    <MissingClass>java.util.Properties</MissingClass>
+    <MissingClass>java.util.ResourceBundle</MissingClass>
+    <MissingClass>java.util.Set</MissingClass>
+    <MissingClass>java.util.StringTokenizer</MissingClass>
+    <MissingClass>java.util.TimeZone</MissingClass>
+    <MissingClass>java.util.logging.ConsoleHandler</MissingClass>
+    <MissingClass>java.util.logging.Level</MissingClass>
+    <MissingClass>java.util.logging.Logger</MissingClass>
+    <MissingClass>java.util.stream.Stream</MissingClass>
+    <MissingClass>javax.naming.Context</MissingClass>
+    <MissingClass>javax.naming.InitialContext</MissingClass>
+    <MissingClass>javax.naming.NamingException</MissingClass>
+    <MissingClass>javax.servlet.RequestDispatcher</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServlet</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletRequest</MissingClass>
+    <MissingClass>javax.servlet.http.HttpServletResponse</MissingClass>
+    <MissingClass>javax.servlet.http.HttpSession</MissingClass>
+    <MissingClass>javax.sql.DataSource</MissingClass>
+    <MissingClass>javax.xml.datatype.DatatypeFactory</MissingClass>
+    <MissingClass>javax.xml.datatype.XMLGregorianCalendar</MissingClass>
+    <MissingClass>javax.xml.namespace.NamespaceContext</MissingClass>
+    <MissingClass>javax.xml.namespace.QName</MissingClass>
+    <MissingClass>javax.xml.parsers.DocumentBuilder</MissingClass>
+    <MissingClass>javax.xml.parsers.SAXParser</MissingClass>
+    <MissingClass>javax.xml.parsers.SAXParserFactory</MissingClass>
+    <MissingClass>javax.xml.soap.SOAPFault</MissingClass>
+    <MissingClass>javax.xml.transform.Result</MissingClass>
+    <MissingClass>javax.xml.transform.Source</MissingClass>
+    <MissingClass>javax.xml.transform.dom.DOMResult</MissingClass>
+    <MissingClass>javax.xml.transform.dom.DOMSource</MissingClass>
+    <MissingClass>javax.xml.transform.sax.SAXResult</MissingClass>
+    <MissingClass>javax.xml.transform.sax.SAXSource</MissingClass>
+    <MissingClass>javax.xml.transform.stream.StreamResult</MissingClass>
+    <MissingClass>javax.xml.transform.stream.StreamSource</MissingClass>
+    <MissingClass>org.apache.tools.ant.BuildException</MissingClass>
+    <MissingClass>org.apache.tools.ant.DirectoryScanner</MissingClass>
+    <MissingClass>org.apache.tools.ant.PathTokenizer</MissingClass>
+    <MissingClass>org.apache.tools.ant.Project</MissingClass>
+    <MissingClass>org.apache.tools.ant.Task</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Copy</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Jar</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Manifest</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Manifest$Attribute</MissingClass>
+    <MissingClass>org.apache.tools.ant.taskdefs.Manifest$Section</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.FileSet</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.Path</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.Resource</MissingClass>
+    <MissingClass>org.apache.tools.ant.types.ZipFileSet</MissingClass>
+    <MissingClass>org.apache.tools.ant.util.FileUtils</MissingClass>
+    <MissingClass>org.apache.tools.zip.ZipEntry</MissingClass>
+    <MissingClass>org.apache.tools.zip.ZipFile</MissingClass>
+    <MissingClass>org.apache.tools.zip.ZipOutputStream</MissingClass>
+    <MissingClass>org.w3c.dom.Document</MissingClass>
+    <MissingClass>org.w3c.dom.Node</MissingClass>
+    <MissingClass>org.w3c.dom.NodeList</MissingClass>
+    <MissingClass>org.xml.sax.ContentHandler</MissingClass>
+    <MissingClass>org.xml.sax.ErrorHandler</MissingClass>
+    <MissingClass>org.xml.sax.InputSource</MissingClass>
+    <MissingClass>org.xml.sax.Locator</MissingClass>
+    <MissingClass>org.xml.sax.SAXException</MissingClass>
+    <MissingClass>org.xml.sax.SAXNotRecognizedException</MissingClass>
+    <MissingClass>org.xml.sax.SAXParseException</MissingClass>
+    <MissingClass>org.xml.sax.helpers.XMLFilterImpl</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Mon, 15 Feb 2021 18:18:00 +0000" total_classes="223" referenced_classes="223" total_bugs="89" total_size="4872" num_packages="27" java_version="11.0.9.1" vm_version="11.0.9.1+1-Ubuntu-0ubuntu1.18.04" cpu_seconds="21.54" clock_seconds="244.23" peak_mbytes="181.15" alloc_mbytes="768.00" gc_seconds="0.24" priority_3="25" priority_2="59" priority_1="5">
+    <PackageStats package="javax.annotation" total_bugs="0" total_types="7" total_size="29">
+      <ClassStats class="javax.annotation.Generated" sourceFile="Generated.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.annotation.ManagedBean" sourceFile="ManagedBean.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.annotation.PostConstruct" sourceFile="PostConstruct.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.PreDestroy" sourceFile="PreDestroy.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.Resource" sourceFile="Resource.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.annotation.Resource$AuthenticationType" sourceFile="Resource.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.annotation.Resources" sourceFile="Resources.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.annotation.security" total_bugs="0" total_types="5" total_size="8">
+      <ClassStats class="javax.annotation.security.DeclareRoles" sourceFile="DeclareRoles.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.annotation.security.DenyAll" sourceFile="DenyAll.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.security.PermitAll" sourceFile="PermitAll.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.annotation.security.RolesAllowed" sourceFile="RolesAllowed.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.annotation.security.RunAs" sourceFile="RunAs.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.annotation.sql" total_bugs="0" total_types="2" total_size="21">
+      <ClassStats class="javax.annotation.sql.DataSourceDefinition" sourceFile="DataSourceDefinition.java" interface="true" size="19" bugs="0"/>
+      <ClassStats class="javax.annotation.sql.DataSourceDefinitions" sourceFile="DataSourceDefinitions.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.jws" total_bugs="0" total_types="7" total_size="39">
+      <ClassStats class="javax.jws.HandlerChain" sourceFile="HandlerChain.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.jws.Oneway" sourceFile="Oneway.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.jws.WebMethod" sourceFile="WebMethod.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.jws.WebParam" sourceFile="WebParam.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.jws.WebParam$Mode" sourceFile="WebParam.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.jws.WebResult" sourceFile="WebResult.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.jws.WebService" sourceFile="WebService.java" interface="true" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.jws.soap" total_bugs="0" total_types="7" total_size="48">
+      <ClassStats class="javax.jws.soap.InitParam" sourceFile="InitParam.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding" sourceFile="SOAPBinding.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding$ParameterStyle" sourceFile="SOAPBinding.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding$Style" sourceFile="SOAPBinding.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPBinding$Use" sourceFile="SOAPBinding.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPMessageHandler" sourceFile="SOAPMessageHandler.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.jws.soap.SOAPMessageHandlers" sourceFile="SOAPMessageHandlers.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind" total_bugs="8" total_types="38" total_size="1396" priority_3="1" priority_2="4" priority_1="3">
+      <ClassStats class="javax.xml.bind.Binder" sourceFile="Binder.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ContextFinder" sourceFile="ContextFinder.java" interface="false" size="194" bugs="2" priority_2="2"/>
+      <ClassStats class="javax.xml.bind.ContextFinder$1" sourceFile="ContextFinder.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DataBindingException" sourceFile="DataBindingException.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverter" sourceFile="DatatypeConverter.java" interface="false" size="94" bugs="1" priority_3="1"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverterImpl" sourceFile="DatatypeConverterImpl.java" interface="false" size="345" bugs="3" priority_1="3"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverterImpl$CalendarFormatter" sourceFile="DatatypeConverterImpl.java" interface="false" size="86" bugs="0"/>
+      <ClassStats class="javax.xml.bind.DatatypeConverterInterface" sourceFile="DatatypeConverterInterface.java" interface="true" size="39" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Element" sourceFile="Element.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.GetPropertyAction" sourceFile="GetPropertyAction.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXB" sourceFile="JAXB.java" interface="false" size="156" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXB$Cache" sourceFile="JAXB.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBContext" sourceFile="JAXBContext.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBElement" sourceFile="JAXBElement.java" interface="false" size="42" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBElement$GlobalScope" sourceFile="JAXBElement.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBException" sourceFile="JAXBException.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="javax.xml.bind.JAXBIntrospector" sourceFile="JAXBIntrospector.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="javax.xml.bind.JAXBPermission" sourceFile="JAXBPermission.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.MarshalException" sourceFile="MarshalException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Marshaller" sourceFile="Marshaller.java" interface="true" size="28" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Marshaller$Listener" sourceFile="Marshaller.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Messages" sourceFile="Messages.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.xml.bind.NotIdentifiableEvent" sourceFile="NotIdentifiableEvent.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ParseConversionEvent" sourceFile="ParseConversionEvent.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.PrintConversionEvent" sourceFile="PrintConversionEvent.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.PropertyException" sourceFile="PropertyException.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="javax.xml.bind.SchemaOutputResolver" sourceFile="SchemaOutputResolver.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.TypeConstraintException" sourceFile="TypeConstraintException.java" interface="false" size="38" bugs="1" priority_2="1"/>
+      <ClassStats class="javax.xml.bind.UnmarshalException" sourceFile="UnmarshalException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Unmarshaller" sourceFile="Unmarshaller.java" interface="true" size="30" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Unmarshaller$Listener" sourceFile="Unmarshaller.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.UnmarshallerHandler" sourceFile="UnmarshallerHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationEvent" sourceFile="ValidationEvent.java" interface="true" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationEventHandler" sourceFile="ValidationEventHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationEventLocator" sourceFile="ValidationEventLocator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.ValidationException" sourceFile="ValidationException.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.Validator" sourceFile="Validator.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.WhiteSpaceProcessor" sourceFile="WhiteSpaceProcessor.java" interface="false" size="69" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.annotation" total_bugs="0" total_types="40" total_size="173">
+      <ClassStats class="javax.xml.bind.annotation.DomHandler" sourceFile="DomHandler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.W3CDomHandler" sourceFile="W3CDomHandler.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessOrder" sourceFile="XmlAccessOrder.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessType" sourceFile="XmlAccessType.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessorOrder" sourceFile="XmlAccessorOrder.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAccessorType" sourceFile="XmlAccessorType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAnyAttribute" sourceFile="XmlAnyAttribute.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAnyElement" sourceFile="XmlAnyElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAttachmentRef" sourceFile="XmlAttachmentRef.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlAttribute" sourceFile="XmlAttribute.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElement" sourceFile="XmlElement.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElement$DEFAULT" sourceFile="XmlElement.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementDecl" sourceFile="XmlElementDecl.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementDecl$GLOBAL" sourceFile="XmlElementDecl.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementRef" sourceFile="XmlElementRef.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementRef$DEFAULT" sourceFile="XmlElementRef.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementRefs" sourceFile="XmlElementRefs.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElementWrapper" sourceFile="XmlElementWrapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlElements" sourceFile="XmlElements.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlEnum" sourceFile="XmlEnum.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlEnumValue" sourceFile="XmlEnumValue.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlID" sourceFile="XmlID.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlIDREF" sourceFile="XmlIDREF.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlInlineBinaryData" sourceFile="XmlInlineBinaryData.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlList" sourceFile="XmlList.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlMimeType" sourceFile="XmlMimeType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlMixed" sourceFile="XmlMixed.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlNs" sourceFile="XmlNs.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlNsForm" sourceFile="XmlNsForm.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlRegistry" sourceFile="XmlRegistry.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlRootElement" sourceFile="XmlRootElement.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchema" sourceFile="XmlSchema.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchemaType" sourceFile="XmlSchemaType.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchemaType$DEFAULT" sourceFile="XmlSchemaType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSchemaTypes" sourceFile="XmlSchemaTypes.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlSeeAlso" sourceFile="XmlSeeAlso.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlTransient" sourceFile="XmlTransient.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlType" sourceFile="XmlType.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlType$DEFAULT" sourceFile="XmlType.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.XmlValue" sourceFile="XmlValue.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.annotation.adapters" total_bugs="1" total_types="7" total_size="86" priority_3="1">
+      <ClassStats class="javax.xml.bind.annotation.adapters.CollapsedStringAdapter" sourceFile="CollapsedStringAdapter.java" interface="false" size="39" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.HexBinaryAdapter" sourceFile="HexBinaryAdapter.java" interface="false" size="11" bugs="1" priority_3="1"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.NormalizedStringAdapter" sourceFile="NormalizedStringAdapter.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlAdapter" sourceFile="XmlAdapter.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter" sourceFile="XmlJavaTypeAdapter.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter$DEFAULT" sourceFile="XmlJavaTypeAdapter.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters" sourceFile="XmlJavaTypeAdapters.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.attachment" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="javax.xml.bind.attachment.AttachmentMarshaller" sourceFile="AttachmentMarshaller.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.bind.attachment.AttachmentUnmarshaller" sourceFile="AttachmentUnmarshaller.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.helpers" total_bugs="0" total_types="9" total_size="516">
+      <ClassStats class="javax.xml.bind.helpers.AbstractMarshallerImpl" sourceFile="AbstractMarshallerImpl.java" interface="false" size="165" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.AbstractUnmarshallerImpl" sourceFile="AbstractUnmarshallerImpl.java" interface="false" size="138" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.DefaultValidationEventHandler" sourceFile="DefaultValidationEventHandler.java" interface="false" size="43" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.Messages" sourceFile="Messages.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.NotIdentifiableEventImpl" sourceFile="NotIdentifiableEventImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.ParseConversionEventImpl" sourceFile="ParseConversionEventImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.PrintConversionEventImpl" sourceFile="PrintConversionEventImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.ValidationEventImpl" sourceFile="ValidationEventImpl.java" interface="false" size="44" bugs="0"/>
+      <ClassStats class="javax.xml.bind.helpers.ValidationEventLocatorImpl" sourceFile="ValidationEventLocatorImpl.java" interface="false" size="80" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.bind.util" total_bugs="0" total_types="5" total_size="154">
+      <ClassStats class="javax.xml.bind.util.JAXBResult" sourceFile="JAXBResult.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.JAXBSource" sourceFile="JAXBSource.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.JAXBSource$1" sourceFile="JAXBSource.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.Messages" sourceFile="Messages.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="javax.xml.bind.util.ValidationEventCollector" sourceFile="ValidationEventCollector.java" interface="false" size="28" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws" total_bugs="0" total_types="32" total_size="269">
+      <ClassStats class="javax.xml.ws.Action" sourceFile="Action.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.AsyncHandler" sourceFile="AsyncHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Binding" sourceFile="Binding.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.BindingProvider" sourceFile="BindingProvider.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.ws.BindingType" sourceFile="BindingType.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Dispatch" sourceFile="Dispatch.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Endpoint" sourceFile="Endpoint.java" interface="false" size="35" bugs="0"/>
+      <ClassStats class="javax.xml.ws.EndpointContext" sourceFile="EndpointContext.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.EndpointReference" sourceFile="EndpointReference.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.ws.FaultAction" sourceFile="FaultAction.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Holder" sourceFile="Holder.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.ws.LogicalMessage" sourceFile="LogicalMessage.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ProtocolException" sourceFile="ProtocolException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Provider" sourceFile="Provider.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.RequestWrapper" sourceFile="RequestWrapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.RespectBinding" sourceFile="RespectBinding.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.RespectBindingFeature" sourceFile="RespectBindingFeature.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Response" sourceFile="Response.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ResponseWrapper" sourceFile="ResponseWrapper.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Service" sourceFile="Service.java" interface="false" size="59" bugs="0"/>
+      <ClassStats class="javax.xml.ws.Service$Mode" sourceFile="Service.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="javax.xml.ws.ServiceMode" sourceFile="ServiceMode.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebEndpoint" sourceFile="WebEndpoint.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebFault" sourceFile="WebFault.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceClient" sourceFile="WebServiceClient.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceContext" sourceFile="WebServiceContext.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceException" sourceFile="WebServiceException.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceFeature" sourceFile="WebServiceFeature.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServicePermission" sourceFile="WebServicePermission.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceProvider" sourceFile="WebServiceProvider.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceRef" sourceFile="WebServiceRef.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="javax.xml.ws.WebServiceRefs" sourceFile="WebServiceRefs.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.handler" total_bugs="0" total_types="7" total_size="43">
+      <ClassStats class="javax.xml.ws.handler.Handler" sourceFile="Handler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.HandlerResolver" sourceFile="HandlerResolver.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.LogicalHandler" sourceFile="LogicalHandler.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.LogicalMessageContext" sourceFile="LogicalMessageContext.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.MessageContext" sourceFile="MessageContext.java" interface="true" size="21" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.MessageContext$Scope" sourceFile="MessageContext.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.PortInfo" sourceFile="PortInfo.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.handler.soap" total_bugs="0" total_types="2" total_size="7">
+      <ClassStats class="javax.xml.ws.handler.soap.SOAPHandler" sourceFile="SOAPHandler.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.handler.soap.SOAPMessageContext" sourceFile="SOAPMessageContext.java" interface="true" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.http" total_bugs="0" total_types="2" total_size="10">
+      <ClassStats class="javax.xml.ws.http.HTTPBinding" sourceFile="HTTPBinding.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="javax.xml.ws.http.HTTPException" sourceFile="HTTPException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.soap" total_bugs="2" total_types="7" total_size="91" priority_3="2">
+      <ClassStats class="javax.xml.ws.soap.Addressing" sourceFile="Addressing.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.AddressingFeature" sourceFile="AddressingFeature.java" interface="false" size="25" bugs="1" priority_3="1"/>
+      <ClassStats class="javax.xml.ws.soap.AddressingFeature$Responses" sourceFile="AddressingFeature.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.MTOM" sourceFile="MTOM.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.MTOMFeature" sourceFile="MTOMFeature.java" interface="false" size="30" bugs="1" priority_3="1"/>
+      <ClassStats class="javax.xml.ws.soap.SOAPBinding" sourceFile="SOAPBinding.java" interface="true" size="11" bugs="0"/>
+      <ClassStats class="javax.xml.ws.soap.SOAPFaultException" sourceFile="SOAPFaultException.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.spi" total_bugs="1" total_types="5" total_size="155" priority_3="1">
+      <ClassStats class="javax.xml.ws.spi.FactoryFinder" sourceFile="FactoryFinder.java" interface="false" size="59" bugs="1" priority_3="1"/>
+      <ClassStats class="javax.xml.ws.spi.Invoker" sourceFile="Invoker.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.Provider" sourceFile="Provider.java" interface="false" size="65" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.ServiceDelegate" sourceFile="ServiceDelegate.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.WebServiceFeatureAnnotation" sourceFile="WebServiceFeatureAnnotation.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.spi.http" total_bugs="1" total_types="3" total_size="42" priority_2="1">
+      <ClassStats class="javax.xml.ws.spi.http.HttpContext" sourceFile="HttpContext.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="javax.xml.ws.spi.http.HttpExchange" sourceFile="HttpExchange.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="javax.xml.ws.spi.http.HttpHandler" sourceFile="HttpHandler.java" interface="false" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="javax.xml.ws.wsaddressing" total_bugs="1" total_types="5" total_size="107" priority_3="1">
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReference" sourceFile="W3CEndpointReference.java" interface="false" size="38" bugs="1" priority_3="1"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReference$Address" sourceFile="W3CEndpointReference.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReference$Elements" sourceFile="W3CEndpointReference.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder" sourceFile="W3CEndpointReferenceBuilder.java" interface="false" size="58" bugs="0"/>
+      <ClassStats class="javax.xml.ws.wsaddressing.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.netbeans.modules.java.j2seproject.copylibstask" total_bugs="4" total_types="2" total_size="294" priority_2="3" priority_1="1">
+      <ClassStats class="org.netbeans.modules.java.j2seproject.copylibstask.CopyFiles" sourceFile="CopyFiles.java" interface="false" size="78" bugs="0"/>
+      <ClassStats class="org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs" sourceFile="CopyLibs.java" interface="false" size="216" bugs="4" priority_2="3" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="sonphse.cart" total_bugs="2" total_types="2" total_size="67" priority_3="2">
+      <ClassStats class="sonphse.cart.Cart" sourceFile="Cart.java" interface="false" size="44" bugs="1" priority_3="1"/>
+      <ClassStats class="sonphse.cart.Item" sourceFile="Item.java" interface="false" size="23" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="sonphse.mobile" total_bugs="4" total_types="5" total_size="357" priority_3="4">
+      <ClassStats class="sonphse.mobile.MobileDAO" sourceFile="MobileDAO.java" interface="false" size="196" bugs="0"/>
+      <ClassStats class="sonphse.mobile.MobileDTO" sourceFile="MobileDTO.java" interface="false" size="56" bugs="1" priority_3="1"/>
+      <ClassStats class="sonphse.mobile.MobileInsertError" sourceFile="MobileInsertError.java" interface="false" size="56" bugs="1" priority_3="1"/>
+      <ClassStats class="sonphse.mobile.MobileSearchUserError" sourceFile="MobileSearchUserError.java" interface="false" size="21" bugs="1" priority_3="1"/>
+      <ClassStats class="sonphse.mobile.MobileUpdateError" sourceFile="MobileUpdateError.java" interface="false" size="28" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="sonphse.order" total_bugs="7" total_types="3" total_size="133" priority_3="4" priority_2="3">
+      <ClassStats class="sonphse.order.OrderDAO" sourceFile="OrderDAO.java" interface="false" size="91" bugs="2" priority_3="2"/>
+      <ClassStats class="sonphse.order.OrderDTO" sourceFile="OrderDTO.java" interface="false" size="28" bugs="4" priority_3="1" priority_2="3"/>
+      <ClassStats class="sonphse.order.OrderInsertError" sourceFile="OrderInsertError.java" interface="false" size="14" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="sonphse.orderdetail" total_bugs="4" total_types="2" total_size="71" priority_3="3" priority_2="1">
+      <ClassStats class="sonphse.orderdetail.OrderDetailDAO" sourceFile="OrderDetailDAO.java" interface="false" size="36" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="sonphse.orderdetail.OrderDetailDTO" sourceFile="OrderDetailDTO.java" interface="false" size="35" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="sonphse.servlets" total_bugs="50" total_types="13" total_size="648" priority_3="2" priority_2="47" priority_1="1">
+      <ClassStats class="sonphse.servlets.AddToCartServlet" sourceFile="AddToCartServlet.java" interface="false" size="43" bugs="2" priority_3="1" priority_2="1"/>
+      <ClassStats class="sonphse.servlets.DeleteMobileServlet" sourceFile="DeleteMobileServlet.java" interface="false" size="39" bugs="1" priority_2="1"/>
+      <ClassStats class="sonphse.servlets.InsertMobileServlet" sourceFile="InsertMobileServlet.java" interface="false" size="89" bugs="8" priority_2="8"/>
+      <ClassStats class="sonphse.servlets.LoginServlet" sourceFile="LoginServlet.java" interface="false" size="50" bugs="4" priority_2="3" priority_1="1"/>
+      <ClassStats class="sonphse.servlets.LogoutServlet" sourceFile="LogoutServlet.java" interface="false" size="24" bugs="1" priority_2="1"/>
+      <ClassStats class="sonphse.servlets.OrderProductsServlet" sourceFile="OrderProductsServlet.java" interface="false" size="65" bugs="4" priority_2="4"/>
+      <ClassStats class="sonphse.servlets.OrderServlet" sourceFile="OrderServlet.java" interface="false" size="76" bugs="14" priority_2="14"/>
+      <ClassStats class="sonphse.servlets.RemoveFromCartServlet" sourceFile="RemoveFromCartServlet.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="sonphse.servlets.SearchServlet" sourceFile="SearchServlet.java" interface="false" size="30" bugs="2" priority_2="2"/>
+      <ClassStats class="sonphse.servlets.SearchStaffServlet" sourceFile="SearchStaffServlet.java" interface="false" size="49" bugs="4" priority_3="1" priority_2="3"/>
+      <ClassStats class="sonphse.servlets.SearchUserServlet" sourceFile="SearchUserServlet.java" interface="false" size="47" bugs="2" priority_2="2"/>
+      <ClassStats class="sonphse.servlets.StartupServlet" sourceFile="StartupServlet.java" interface="false" size="33" bugs="3" priority_2="3"/>
+      <ClassStats class="sonphse.servlets.UpdateMobileServlet" sourceFile="UpdateMobileServlet.java" interface="false" size="75" bugs="5" priority_2="5"/>
+    </PackageStats>
+    <PackageStats package="sonphse.user" total_bugs="3" total_types="3" total_size="84" priority_3="3">
+      <ClassStats class="sonphse.user.LoginError" sourceFile="LoginError.java" interface="false" size="21" bugs="1" priority_3="1"/>
+      <ClassStats class="sonphse.user.UserDAO" sourceFile="UserDAO.java" interface="false" size="28" bugs="1" priority_3="1"/>
+      <ClassStats class="sonphse.user.UserDTO" sourceFile="UserDTO.java" interface="false" size="35" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <PackageStats package="sonphse.utils" total_bugs="1" total_types="1" total_size="9" priority_3="1">
+      <ClassStats class="sonphse.utils.DBUtils" sourceFile="DBUtils.java" interface="false" size="9" bugs="1" priority_3="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="345" invocations="2" avgMicrosecondsPerInvocation="172592" maxMicrosecondsPerInvocation="211123" standardDeviationMircosecondsPerInvocation="38531"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="323" invocations="628" avgMicrosecondsPerInvocation="515" maxMicrosecondsPerInvocation="30590" standardDeviationMircosecondsPerInvocation="2724"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="289" invocations="830" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="28209" standardDeviationMircosecondsPerInvocation="1944"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="283" invocations="821" avgMicrosecondsPerInvocation="344" maxMicrosecondsPerInvocation="22042" standardDeviationMircosecondsPerInvocation="1912"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="247" invocations="819" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="20422" standardDeviationMircosecondsPerInvocation="1760"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="236" invocations="810" avgMicrosecondsPerInvocation="292" maxMicrosecondsPerInvocation="21279" standardDeviationMircosecondsPerInvocation="1591"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="225" invocations="832" avgMicrosecondsPerInvocation="271" maxMicrosecondsPerInvocation="21583" standardDeviationMircosecondsPerInvocation="1672"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="195" invocations="821" avgMicrosecondsPerInvocation="238" maxMicrosecondsPerInvocation="19006" standardDeviationMircosecondsPerInvocation="1324"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="167" invocations="223" avgMicrosecondsPerInvocation="749" maxMicrosecondsPerInvocation="24014" standardDeviationMircosecondsPerInvocation="3258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="137" invocations="8" avgMicrosecondsPerInvocation="17235" maxMicrosecondsPerInvocation="99603" standardDeviationMircosecondsPerInvocation="32009"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="107" invocations="859" avgMicrosecondsPerInvocation="125" maxMicrosecondsPerInvocation="16526" standardDeviationMircosecondsPerInvocation="952"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteLoop" totalMilliseconds="93" invocations="223" avgMicrosecondsPerInvocation="419" maxMicrosecondsPerInvocation="20172" standardDeviationMircosecondsPerInvocation="2365"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="91" invocations="223" avgMicrosecondsPerInvocation="409" maxMicrosecondsPerInvocation="17316" standardDeviationMircosecondsPerInvocation="2316"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="85" invocations="1235" avgMicrosecondsPerInvocation="69" maxMicrosecondsPerInvocation="25956" standardDeviationMircosecondsPerInvocation="1021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="75" invocations="366" avgMicrosecondsPerInvocation="207" maxMicrosecondsPerInvocation="26018" standardDeviationMircosecondsPerInvocation="1775"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="73" invocations="8605" avgMicrosecondsPerInvocation="8" maxMicrosecondsPerInvocation="14611" standardDeviationMircosecondsPerInvocation="258"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.UnreadFields" totalMilliseconds="69" invocations="223" avgMicrosecondsPerInvocation="313" maxMicrosecondsPerInvocation="18778" standardDeviationMircosecondsPerInvocation="1522"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="69" invocations="223" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="32453" standardDeviationMircosecondsPerInvocation="2482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="67" invocations="223" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="19914" standardDeviationMircosecondsPerInvocation="1712"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="67" invocations="821" avgMicrosecondsPerInvocation="81" maxMicrosecondsPerInvocation="17678" standardDeviationMircosecondsPerInvocation="821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SerializableIdiom" totalMilliseconds="66" invocations="223" avgMicrosecondsPerInvocation="297" maxMicrosecondsPerInvocation="25356" standardDeviationMircosecondsPerInvocation="1944"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="60" invocations="578" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="10973" standardDeviationMircosecondsPerInvocation="625"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="58" invocations="223" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="16301" standardDeviationMircosecondsPerInvocation="1568"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="56" invocations="1235" avgMicrosecondsPerInvocation="45" maxMicrosecondsPerInvocation="16201" standardDeviationMircosecondsPerInvocation="596"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="53" invocations="223" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="17157" standardDeviationMircosecondsPerInvocation="1571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.SwitchFallthrough" totalMilliseconds="52" invocations="223" avgMicrosecondsPerInvocation="236" maxMicrosecondsPerInvocation="21326" standardDeviationMircosecondsPerInvocation="1635"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="52" invocations="223" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="21664" standardDeviationMircosecondsPerInvocation="1465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="51" invocations="223" avgMicrosecondsPerInvocation="229" maxMicrosecondsPerInvocation="16089" standardDeviationMircosecondsPerInvocation="1113"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="50" invocations="806" avgMicrosecondsPerInvocation="63" maxMicrosecondsPerInvocation="26189" standardDeviationMircosecondsPerInvocation="927"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="47" invocations="223" avgMicrosecondsPerInvocation="212" maxMicrosecondsPerInvocation="16499" standardDeviationMircosecondsPerInvocation="1379"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RepeatedConditionals" totalMilliseconds="46" invocations="223" avgMicrosecondsPerInvocation="210" maxMicrosecondsPerInvocation="16590" standardDeviationMircosecondsPerInvocation="1418"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.InfiniteRecursiveLoop" totalMilliseconds="46" invocations="223" avgMicrosecondsPerInvocation="206" maxMicrosecondsPerInvocation="16279" standardDeviationMircosecondsPerInvocation="1532"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="43" invocations="223" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="14547" standardDeviationMircosecondsPerInvocation="1300"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.IntCast2LongAsInstant" totalMilliseconds="40" invocations="223" avgMicrosecondsPerInvocation="180" maxMicrosecondsPerInvocation="14795" standardDeviationMircosecondsPerInvocation="1342"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="37" invocations="223" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="16178" standardDeviationMircosecondsPerInvocation="1085"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindHEmismatch" totalMilliseconds="37" invocations="223" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="20014" standardDeviationMircosecondsPerInvocation="1340"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="37" invocations="223" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="13342" standardDeviationMircosecondsPerInvocation="928"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="37" invocations="223" avgMicrosecondsPerInvocation="166" maxMicrosecondsPerInvocation="16306" standardDeviationMircosecondsPerInvocation="1165"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
