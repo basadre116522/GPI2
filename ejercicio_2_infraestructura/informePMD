@@ -1,0 +1,68 @@
+/home/alumno/Escritorio/Shopping/src/java/sonphse/cart/Cart.java:21:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/cart/Cart.java:87:	FormalParameterNamingConventions:	The lambda parameter name '_item' doesn't match '[a-z][a-zA-Z0-9]*'
+/home/alumno/Escritorio/Shopping/src/java/sonphse/cart/Item.java:19:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileDAO.java:232:	ControlStatementBraces:	This statement should have braces
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileDAO.java:233:	ControlStatementBraces:	This statement should have braces
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileDAO.java:234:	ControlStatementBraces:	This statement should have braces
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileDAO.java:262:	ControlStatementBraces:	This statement should have braces
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileDAO.java:263:	ControlStatementBraces:	This statement should have braces
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileDAO.java:264:	ControlStatementBraces:	This statement should have braces
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileDTO.java:23:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileInsertError.java:23:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileSearchUserError.java:18:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/mobile/MobileUpdateError.java:19:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/order/OrderDAO.java:17:	UnusedImports:	Avoid unused imports such as 'sonphse.mobile.MobileDAO'
+/home/alumno/Escritorio/Shopping/src/java/sonphse/order/OrderDAO.java:18:	UnusedImports:	Avoid unused imports such as 'sonphse.mobile.MobileDTO'
+/home/alumno/Escritorio/Shopping/src/java/sonphse/order/OrderDAO.java:155:	PreserveStackTrace:	New exception is thrown in catch block, original stack trace may be lost
+/home/alumno/Escritorio/Shopping/src/java/sonphse/order/OrderDTO.java:20:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/order/OrderInsertError.java:17:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/orderdetail/OrderDetailDAO.java:11:	UnusedImports:	Avoid unused imports such as 'java.sql.ResultSet'
+/home/alumno/Escritorio/Shopping/src/java/sonphse/orderdetail/OrderDetailDAO.java:18:	UnusedImports:	Avoid unused imports such as 'sonphse.order.OrderDAO'
+/home/alumno/Escritorio/Shopping/src/java/sonphse/orderdetail/OrderDetailDAO.java:65:	PreserveStackTrace:	New exception is thrown in catch block, original stack trace may be lost
+/home/alumno/Escritorio/Shopping/src/java/sonphse/orderdetail/OrderDetailDTO.java:20:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/AddToCartServlet.java:30:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/InsertMobileServlet.java:30:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/InsertMobileServlet.java:32:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/InsertMobileServlet.java:109:	LiteralsFirstInComparisons:	Position literals first in String comparisons
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/LoginServlet.java:30:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/LoginServlet.java:31:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/LoginServlet.java:32:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/LogoutServlet.java:23:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderProductsServlet.java:29:	UnusedImports:	Avoid unused imports such as 'sonphse.orderdetail.OrderDetailDAO'
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderProductsServlet.java:39:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderProductsServlet.java:40:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderProductsServlet.java:41:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:24:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:25:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:26:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:27:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:28:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:29:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:30:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:31:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:32:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:33:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:34:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:35:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:36:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/OrderServlet.java:38:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/RemoveFromCartServlet.java:10:	UnusedImports:	Avoid unused imports such as 'java.util.Arrays'
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchServlet.java:26:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchServlet.java:27:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchStaffServlet.java:31:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchStaffServlet.java:32:	UnusedPrivateField:	Avoid unused private fields such as 'ORDER_SERVLET'.
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchStaffServlet.java:32:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchStaffServlet.java:33:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchStaffServlet.java:63:	LiteralsFirstInComparisons:	Position literals first in String comparisons
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/SearchUserServlet.java:30:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/StartupServlet.java:26:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/StartupServlet.java:27:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/StartupServlet.java:28:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/UpdateMobileServlet.java:30:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/UpdateMobileServlet.java:32:	FinalFieldCouldBeStatic:	This final field could be made static
+/home/alumno/Escritorio/Shopping/src/java/sonphse/servlets/UpdateMobileServlet.java:92:	LiteralsFirstInComparisons:	Position literals first in String comparisons
+/home/alumno/Escritorio/Shopping/src/java/sonphse/user/LoginError.java:18:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/user/UserDAO.java:20:	UseUtilityClass:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+/home/alumno/Escritorio/Shopping/src/java/sonphse/user/UserDTO.java:20:	UncommentedEmptyConstructor:	Document empty constructor
+/home/alumno/Escritorio/Shopping/src/java/sonphse/utils/DBUtils.java:20:	UseUtilityClass:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+/home/alumno/Escritorio/Shopping/src/java/sonphse/utils/DBUtils.java:29:	UnnecessaryLocalBeforeReturn:	Consider simply returning the value vs storing it in local variable 'conn'
