@@ -1,0 +1,1868 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>FindBugs Report</title>
+        <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+        <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+    </head>
+    <body>
+        <h1>
+            <a href="http://findbugs.sourceforge.net">FindBugs</a>
+             Report
+        </h1>
+        <h2>Project Information</h2>
+        <p>Project: 
+		informeBugsShopping</p>
+        <p>FindBugs version: 3.0.1</p>
+        <p>Code analyzed:</p>
+        <ul>
+            <li>/home/alumno/Escritorio/Shopping</li>
+        </ul>
+        <p>
+            <br />
+            <br />
+        </p>
+        <h2>Metrics</h2>
+        <p>0 lines of code analyzed,
+	in 0 classes, 
+	in 7 packages.</p>
+        <table width="500" cellpadding="5" cellspacing="2">
+            <tr class="tableheader">
+                <th align="left">Metric</th>
+                <th align="right">Total</th>
+                <th align="right">Density*</th>
+            </tr>
+            <tr class="tablerow0">
+                <td>High Priority Warnings</td>
+                <td align="right">1</td>
+                <td align="right">0.00</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>Medium Priority Warnings</td>
+                <td align="right">51</td>
+                <td align="right">0.00</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>Low Priority Warnings</td>
+                <td align="right">19</td>
+                <td align="right">0.00</td>
+            </tr>
+            <tr class="$totalClass">
+                <td>
+                    <b>Total Warnings</b>
+                </td>
+                <td align="right">
+                    <b>71</b>
+                </td>
+                <td align="right">
+                    <b>0.00</b>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+        </p>
+        <p>
+            <br />
+            <br />
+        </p>
+        <h2>Contents</h2>
+        <ul>
+            <li>
+                <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </li>
+            <li>
+                <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+            </li>
+            <li>
+                <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </li>
+            <li>
+                <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+            </li>
+            <li>
+                <a href="#Warnings_SECURITY">Security Warnings</a>
+            </li>
+            <li>
+                <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </li>
+            <li>
+                <a href="#Details">Details</a>
+            </li>
+        </ul>
+        <h1>Summary</h1>
+        <table width="500" cellpadding="5" cellspacing="2">
+            <tr class="tableheader">
+                <th align="left">Warning Type</th>
+                <th align="right">Number</th>
+            </tr>
+            <tr class="tablerow0">
+                <td>
+                    <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+                </td>
+                <td align="right">16</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>
+                    <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+                </td>
+                <td align="right">3</td>
+            </tr>
+            <tr class="tablerow0">
+                <td>
+                    <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+                </td>
+                <td align="right">3</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>
+                    <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+                </td>
+                <td align="right">38</td>
+            </tr>
+            <tr class="tablerow0">
+                <td>
+                    <a href="#Warnings_SECURITY">Security Warnings</a>
+                </td>
+                <td align="right">1</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>
+                    <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+                </td>
+                <td align="right">10</td>
+            </tr>
+            <tr class="tablerow0">
+                <td>
+                    <b>Total</b>
+                </td>
+                <td align="right">
+                    <b>71</b>
+                </td>
+            </tr>
+        </table>
+        <h1>Warnings</h1>
+        <p>Click on a warning row to see full context information.</p>
+        <h2>
+            <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65762');">
+                <td>
+                    <span class="priority-3">Nm</span>
+                </td>
+                <td>Confusing to have methods sonphse.order.OrderDAO.getOrderID() and sonphse.orderdetail.OrderDetailDTO.getOrderId()</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65762" style="display: none;">
+                        <a href="#NM_CONFUSING">Bug type NM_CONFUSING (click for details)</a>
+                        <br />
+                        In class sonphse.order.OrderDAO
+                        <br />
+                        In method sonphse.order.OrderDAO.getOrderID()
+                        <br />
+                        In class sonphse.orderdetail.OrderDetailDTO
+                        <br />
+                        In method sonphse.orderdetail.OrderDetailDTO.getOrderId()
+                        <br />
+                        At OrderDAO.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65552');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.cart.Cart is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65552" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.cart.Cart
+                        <br />
+                        At Cart.java:[lines 21-89]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65587');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.cart.Item is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65587" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.cart.Item
+                        <br />
+                        At Item.java:[lines 19-56]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65622');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.mobile.MobileDTO is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65622" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.mobile.MobileDTO
+                        <br />
+                        At MobileDTO.java:[lines 23-132]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65657');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.mobile.MobileInsertError is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65657" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.mobile.MobileInsertError
+                        <br />
+                        At MobileInsertError.java:[lines 23-132]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65692');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.mobile.MobileSearchUserError is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65692" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.mobile.MobileSearchUserError
+                        <br />
+                        At MobileSearchUserError.java:[lines 18-52]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65727');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.mobile.MobileUpdateError is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65727" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.mobile.MobileUpdateError
+                        <br />
+                        At MobileUpdateError.java:[lines 19-68]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65838');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.order.OrderDAO is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65838" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.order.OrderDAO
+                        <br />
+                        At OrderDAO.java:[lines 25-174]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66085');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.order.OrderDTO is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66085" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.order.OrderDTO
+                        <br />
+                        At OrderDTO.java:[lines 20-69]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66120');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.order.OrderInsertError is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66120" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.order.OrderInsertError
+                        <br />
+                        At OrderInsertError.java:[lines 17-36]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66231');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.orderdetail.OrderDetailDAO is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66231" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.orderdetail.OrderDetailDAO
+                        <br />
+                        At OrderDetailDAO.java:[lines 26-75]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66317');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.orderdetail.OrderDetailDTO is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66317" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.orderdetail.OrderDetailDTO
+                        <br />
+                        At OrderDetailDTO.java:[lines 20-84]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N69110');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.user.LoginError is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N69110" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.user.LoginError
+                        <br />
+                        At LoginError.java:[lines 18-52]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N69145');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.user.UserDAO is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N69145" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.user.UserDAO
+                        <br />
+                        At UserDAO.java:[lines 20-56]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N69180');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.user.UserDTO is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N69180" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.user.UserDTO
+                        <br />
+                        At UserDTO.java:[lines 20-84]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N69215');">
+                <td>
+                    <span class="priority-3">SnVI</span>
+                </td>
+                <td>sonphse.utils.DBUtils is Serializable; consider declaring a serialVersionUID</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N69215" style="display: none;">
+                        <a href="#SE_NO_SERIALVERSIONID">Bug type SE_NO_SERIALVERSIONID (click for details)</a>
+                        <br />
+                        In class sonphse.utils.DBUtils
+                        <br />
+                        At DBUtils.java:[lines 20-29]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            <a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66545');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of description in sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66545" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        In method sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from description
+                        <br />
+                        Dereferenced at InsertMobileServlet.java:[line 79]
+                        <br />
+                        Known null at InsertMobileServlet.java:[line 67]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66616');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of mobileId in sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66616" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        In method sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from mobileId
+                        <br />
+                        Dereferenced at InsertMobileServlet.java:[line 75]
+                        <br />
+                        Known null at InsertMobileServlet.java:[line 67]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68532');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of strMin in sonphse.servlets.SearchUserServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68532" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH">Bug type NP_NULL_ON_SOME_PATH (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchUserServlet
+                        <br />
+                        In method sonphse.servlets.SearchUserServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from strMin
+                        <br />
+                        Dereferenced at SearchUserServlet.java:[line 56]
+                        <br />
+                        Known null at SearchUserServlet.java:[line 55]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65873');">
+                <td>
+                    <span class="priority-2">EI</span>
+                </td>
+                <td>sonphse.order.OrderDTO.getOrderDate() may expose internal representation by returning OrderDTO.orderDate</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65873" style="display: none;">
+                        <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+                        <br />
+                        In class sonphse.order.OrderDTO
+                        <br />
+                        In method sonphse.order.OrderDTO.getOrderDate()
+                        <br />
+                        Field sonphse.order.OrderDTO.orderDate
+                        <br />
+                        At OrderDTO.java:[line 61]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65939');">
+                <td>
+                    <span class="priority-2">EI2</span>
+                </td>
+                <td>new sonphse.order.OrderDTO(int, String, Date) may expose internal representation by storing an externally mutable object into OrderDTO.orderDate</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65939" style="display: none;">
+                        <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                        <br />
+                        In class sonphse.order.OrderDTO
+                        <br />
+                        In method new sonphse.order.OrderDTO(int, String, Date)
+                        <br />
+                        Field sonphse.order.OrderDTO.orderDate
+                        <br />
+                        Local variable named orderDate
+                        <br />
+                        At OrderDTO.java:[line 26]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66012');">
+                <td>
+                    <span class="priority-2">EI2</span>
+                </td>
+                <td>sonphse.order.OrderDTO.setOrderDate(Date) may expose internal representation by storing an externally mutable object into OrderDTO.orderDate</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66012" style="display: none;">
+                        <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                        <br />
+                        In class sonphse.order.OrderDTO
+                        <br />
+                        In method sonphse.order.OrderDTO.setOrderDate(Date)
+                        <br />
+                        Field sonphse.order.OrderDTO.orderDate
+                        <br />
+                        Local variable named orderDate
+                        <br />
+                        At OrderDTO.java:[line 68]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            <a name="Warnings_PERFORMANCE">Performance Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67078');">
+                <td>
+                    <span class="priority-1">Bx</span>
+                </td>
+                <td>Boxing/unboxing to parse a primitive sonphse.servlets.LoginServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67078" style="display: none;">
+                        <a href="#DM_BOXED_PRIMITIVE_FOR_PARSING">Bug type DM_BOXED_PRIMITIVE_FOR_PARSING (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.LoginServlet
+                        <br />
+                        In method sonphse.servlets.LoginServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Called method Integer.intValue()
+                        <br />
+                        Should call Integer.parseInt(String) instead
+                        <br />
+                        At LoginServlet.java:[line 57]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67343');">
+                <td>
+                    <span class="priority-2">SBSC</span>
+                </td>
+                <td>sonphse.servlets.OrderProductsServlet.processRequest(HttpServletRequest, HttpServletResponse) concatenates strings using + in a loop</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67343" style="display: none;">
+                        <a href="#SBSC_USE_STRINGBUFFER_CONCATENATION">Bug type SBSC_USE_STRINGBUFFER_CONCATENATION (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderProductsServlet
+                        <br />
+                        In method sonphse.servlets.OrderProductsServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        At OrderProductsServlet.java:[line 81]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66428');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.AddToCartServlet.SEARCH_USER_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66428" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.AddToCartServlet
+                        <br />
+                        Field sonphse.servlets.AddToCartServlet.SEARCH_USER_PAGE
+                        <br />
+                        At AddToCartServlet.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66980');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.InsertMobileServlet.ERROR_PAGE_NOT_FOUND; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66980" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        Field sonphse.servlets.InsertMobileServlet.ERROR_PAGE_NOT_FOUND
+                        <br />
+                        At InsertMobileServlet.java:[line 32]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67029');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.InsertMobileServlet.INSERT_MOBILE_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67029" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        Field sonphse.servlets.InsertMobileServlet.INSERT_MOBILE_PAGE
+                        <br />
+                        At InsertMobileServlet.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67147');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.LoginServlet.LOGIN_JSP_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67147" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.LoginServlet
+                        <br />
+                        Field sonphse.servlets.LoginServlet.LOGIN_JSP_PAGE
+                        <br />
+                        At LoginServlet.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67196');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.LoginServlet.SEARCH_STAFF_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67196" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.LoginServlet
+                        <br />
+                        Field sonphse.servlets.LoginServlet.SEARCH_STAFF_PAGE
+                        <br />
+                        At LoginServlet.java:[line 32]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67245');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.LoginServlet.SEARCH_USER_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67245" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.LoginServlet
+                        <br />
+                        Field sonphse.servlets.LoginServlet.SEARCH_USER_PAGE
+                        <br />
+                        At LoginServlet.java:[line 31]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67294');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.LogoutServlet.ORDER_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67294" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.LogoutServlet
+                        <br />
+                        Field sonphse.servlets.LogoutServlet.ORDER_SERVLET
+                        <br />
+                        At LogoutServlet.java:[line 23]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67394');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderProductsServlet.LOGIN_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67394" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderProductsServlet
+                        <br />
+                        Field sonphse.servlets.OrderProductsServlet.LOGIN_PAGE
+                        <br />
+                        At OrderProductsServlet.java:[line 39]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67443');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderProductsServlet.SEARCH_USER_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67443" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderProductsServlet
+                        <br />
+                        Field sonphse.servlets.OrderProductsServlet.SEARCH_USER_PAGE
+                        <br />
+                        At OrderProductsServlet.java:[line 40]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67492');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderProductsServlet.VIEW_CART; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67492" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderProductsServlet
+                        <br />
+                        Field sonphse.servlets.OrderProductsServlet.VIEW_CART
+                        <br />
+                        At OrderProductsServlet.java:[line 41]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67541');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.ADD_TO_CART_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67541" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.ADD_TO_CART_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 33]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67590');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.DELETE_MOBILE_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67590" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.DELETE_MOBILE_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 29]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67639');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.ERROR_PAGE_NOT_FOUND; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67639" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.ERROR_PAGE_NOT_FOUND
+                        <br />
+                        At OrderServlet.java:[line 38]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67688');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.INSERT_MOBILE_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67688" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.INSERT_MOBILE_PAGE
+                        <br />
+                        At OrderServlet.java:[line 32]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67737');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.INSERT_MOBILE_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67737" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.INSERT_MOBILE_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 31]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67786');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.LOGIN_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67786" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.LOGIN_PAGE
+                        <br />
+                        At OrderServlet.java:[line 24]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67835');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.LOGIN_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67835" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.LOGIN_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 25]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67884');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.LOGOUT_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67884" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.LOGOUT_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 26]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N67933');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.ORDER_PRODUCTS_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N67933" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.ORDER_PRODUCTS_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 36]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N67982');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.REMOVE_FROM_CART_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N67982" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.REMOVE_FROM_CART_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 35]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68031');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.SEARCH_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68031" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.SEARCH_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 28]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68080');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.START_UP_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68080" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.START_UP_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 27]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68129');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.UPDATE_MOBILE_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68129" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.UPDATE_MOBILE_SERVLET
+                        <br />
+                        At OrderServlet.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68178');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.OrderServlet.VIEW_CART; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68178" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.OrderServlet
+                        <br />
+                        Field sonphse.servlets.OrderServlet.VIEW_CART
+                        <br />
+                        At OrderServlet.java:[line 34]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68227');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.SearchServlet.SEARCH_STAFF_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68227" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchServlet
+                        <br />
+                        Field sonphse.servlets.SearchServlet.SEARCH_STAFF_SERVLET
+                        <br />
+                        At SearchServlet.java:[line 26]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68276');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.SearchServlet.SEARCH_USER_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68276" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchServlet
+                        <br />
+                        Field sonphse.servlets.SearchServlet.SEARCH_USER_SERVLET
+                        <br />
+                        At SearchServlet.java:[line 27]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68385');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.SearchStaffServlet.LOGIN_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68385" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchStaffServlet
+                        <br />
+                        Field sonphse.servlets.SearchStaffServlet.LOGIN_PAGE
+                        <br />
+                        At SearchStaffServlet.java:[line 33]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68434');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.SearchStaffServlet.ORDER_SERVLET; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68434" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchStaffServlet
+                        <br />
+                        Field sonphse.servlets.SearchStaffServlet.ORDER_SERVLET
+                        <br />
+                        At SearchStaffServlet.java:[line 32]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68483');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.SearchStaffServlet.SEARCH_STAFF_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68483" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchStaffServlet
+                        <br />
+                        Field sonphse.servlets.SearchStaffServlet.SEARCH_STAFF_PAGE
+                        <br />
+                        At SearchStaffServlet.java:[line 31]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68603');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.SearchUserServlet.SEARCH_USER_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68603" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchUserServlet
+                        <br />
+                        Field sonphse.servlets.SearchUserServlet.SEARCH_USER_PAGE
+                        <br />
+                        At SearchUserServlet.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68652');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.StartupServlet.LOGIN_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68652" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.StartupServlet
+                        <br />
+                        Field sonphse.servlets.StartupServlet.LOGIN_PAGE
+                        <br />
+                        At StartupServlet.java:[line 26]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68701');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.StartupServlet.SEARCH_STAFF_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68701" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.StartupServlet
+                        <br />
+                        Field sonphse.servlets.StartupServlet.SEARCH_STAFF_PAGE
+                        <br />
+                        At StartupServlet.java:[line 28]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68750');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.StartupServlet.SEARCH_USER_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68750" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.StartupServlet
+                        <br />
+                        Field sonphse.servlets.StartupServlet.SEARCH_USER_PAGE
+                        <br />
+                        At StartupServlet.java:[line 27]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N69012');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.UpdateMobileServlet.ERROR_PAGE_NOT_FOUND; should this field be static?</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N69012" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.UpdateMobileServlet
+                        <br />
+                        Field sonphse.servlets.UpdateMobileServlet.ERROR_PAGE_NOT_FOUND
+                        <br />
+                        At UpdateMobileServlet.java:[line 32]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N69061');">
+                <td>
+                    <span class="priority-2">SS</span>
+                </td>
+                <td>Unread field: sonphse.servlets.UpdateMobileServlet.SEARCH_STAFF_PAGE; should this field be static?</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N69061" style="display: none;">
+                        <a href="#SS_SHOULD_BE_STATIC">Bug type SS_SHOULD_BE_STATIC (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.UpdateMobileServlet
+                        <br />
+                        Field sonphse.servlets.UpdateMobileServlet.SEARCH_STAFF_PAGE
+                        <br />
+                        At UpdateMobileServlet.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66266');">
+                <td>
+                    <span class="priority-2">WMI</span>
+                </td>
+                <td>sonphse.orderdetail.OrderDetailDAO.insertOrderDetail(Map, OrderDTO) makes inefficient use of keySet iterator instead of entrySet iterator</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66266" style="display: none;">
+                        <a href="#WMI_WRONG_MAP_ITERATOR">Bug type WMI_WRONG_MAP_ITERATOR (click for details)</a>
+                        <br />
+                        In class sonphse.orderdetail.OrderDetailDAO
+                        <br />
+                        In method sonphse.orderdetail.OrderDetailDAO.insertOrderDetail(Map, OrderDTO)
+                        <br />
+                        At OrderDetailDAO.java:[line 43]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            <a name="Warnings_SECURITY">Security Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66477');">
+                <td>
+                    <span class="priority-2">HRS</span>
+                </td>
+                <td>HTTP parameter directly written to HTTP header output in sonphse.servlets.DeleteMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66477" style="display: none;">
+                        <a href="#HRS_REQUEST_PARAMETER_TO_HTTP_HEADER">Bug type HRS_REQUEST_PARAMETER_TO_HTTP_HEADER (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.DeleteMobileServlet
+                        <br />
+                        In method sonphse.servlets.DeleteMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Parameter "lastSearchValue"
+                        <br />
+                        Value generated at DeleteMobileServlet.java:[line 42]
+                        <br />
+                        At DeleteMobileServlet.java:[line 55]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            <a name="Warnings_STYLE">Dodgy code Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66687');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of mobileName on branch that might be infeasible in sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66687" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">Bug type NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        In method sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from mobileName
+                        <br />
+                        Dereferenced at InsertMobileServlet.java:[line 83]
+                        <br />
+                        Known null at InsertMobileServlet.java:[line 67]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66758');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of strPrice on branch that might be infeasible in sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66758" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">Bug type NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        In method sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from strPrice
+                        <br />
+                        Dereferenced at InsertMobileServlet.java:[line 95]
+                        <br />
+                        Known null at InsertMobileServlet.java:[line 67]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66832');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of strQuanlity on branch that might be infeasible in sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66832" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">Bug type NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        In method sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from strQuanlity
+                        <br />
+                        Dereferenced at InsertMobileServlet.java:[line 91]
+                        <br />
+                        Known null at InsertMobileServlet.java:[line 67]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66906');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of strYear on branch that might be infeasible in sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66906" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">Bug type NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.InsertMobileServlet
+                        <br />
+                        In method sonphse.servlets.InsertMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from strYear
+                        <br />
+                        Dereferenced at InsertMobileServlet.java:[line 87]
+                        <br />
+                        Known null at InsertMobileServlet.java:[line 67]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68799');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of description on branch that might be infeasible in sonphse.servlets.UpdateMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68799" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">Bug type NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.UpdateMobileServlet
+                        <br />
+                        In method sonphse.servlets.UpdateMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from description
+                        <br />
+                        Dereferenced at UpdateMobileServlet.java:[line 76]
+                        <br />
+                        Known null at UpdateMobileServlet.java:[line 65]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68870');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of priceStr on branch that might be infeasible in sonphse.servlets.UpdateMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68870" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">Bug type NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.UpdateMobileServlet
+                        <br />
+                        In method sonphse.servlets.UpdateMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from priceStr
+                        <br />
+                        Dereferenced at UpdateMobileServlet.java:[line 80]
+                        <br />
+                        Known null at UpdateMobileServlet.java:[line 65]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N68941');">
+                <td>
+                    <span class="priority-2">NP</span>
+                </td>
+                <td>Possible null pointer dereference of quanlityStr on branch that might be infeasible in sonphse.servlets.UpdateMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N68941" style="display: none;">
+                        <a href="#NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">Bug type NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.UpdateMobileServlet
+                        <br />
+                        In method sonphse.servlets.UpdateMobileServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from quanlityStr
+                        <br />
+                        Dereferenced at UpdateMobileServlet.java:[line 84]
+                        <br />
+                        Known null at UpdateMobileServlet.java:[line 65]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N66155');">
+                <td>
+                    <span class="priority-3">RCN</span>
+                </td>
+                <td>Redundant nullcheck of mbDto, which is known to be non-null in sonphse.orderdetail.OrderDetailDAO.insertOrderDetail(Map, OrderDTO)</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N66155" style="display: none;">
+                        <a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+                        <br />
+                        In class sonphse.orderdetail.OrderDetailDAO
+                        <br />
+                        In method sonphse.orderdetail.OrderDetailDAO.insertOrderDetail(Map, OrderDTO)
+                        <br />
+                        Value loaded from mbDto
+                        <br />
+                        Return value of sonphse.mobile.MobileDAO.getMobileById(String) of type sonphse.mobile.MobileDTO
+                        <br />
+                        Redundant null check at OrderDetailDAO.java:[line 42]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66352');">
+                <td>
+                    <span class="priority-3">RCN</span>
+                </td>
+                <td>Redundant nullcheck of dto, which is known to be non-null in sonphse.servlets.AddToCartServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66352" style="display: none;">
+                        <a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.AddToCartServlet
+                        <br />
+                        In method sonphse.servlets.AddToCartServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from dto
+                        <br />
+                        Return value of sonphse.mobile.MobileDAO.getMobileById(String) of type sonphse.mobile.MobileDTO
+                        <br />
+                        Redundant null check at AddToCartServlet.java:[line 60]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N68325');">
+                <td>
+                    <span class="priority-3">RCN</span>
+                </td>
+                <td>Redundant nullcheck of list, which is known to be non-null in sonphse.servlets.SearchStaffServlet.processRequest(HttpServletRequest, HttpServletResponse)</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N68325" style="display: none;">
+                        <a href="#RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">Bug type RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE (click for details)</a>
+                        <br />
+                        In class sonphse.servlets.SearchStaffServlet
+                        <br />
+                        In method sonphse.servlets.SearchStaffServlet.processRequest(HttpServletRequest, HttpServletResponse)
+                        <br />
+                        Value loaded from list
+                        <br />
+                        Redundant null check at SearchStaffServlet.java:[line 68]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h1>
+            <a name="Details">Details</a>
+        </h1>
+        <h2>
+            <a name="DM_BOXED_PRIMITIVE_FOR_PARSING">DM_BOXED_PRIMITIVE_FOR_PARSING: Boxing/unboxing to parse a primitive</a>
+        </h2>
+          <p>A boxed primitive is created from a String, just to extract the unboxed primitive value.
+  It is more efficient to just call the static parseXXX method.</p>
+
+    
+        <h2>
+            <a name="EI_EXPOSE_REP">EI_EXPOSE_REP: May expose internal representation by returning reference to mutable object</a>
+        </h2>
+          <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    
+        <h2>
+            <a name="EI_EXPOSE_REP2">EI_EXPOSE_REP2: May expose internal representation by incorporating reference to mutable object</a>
+        </h2>
+          <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    
+        <h2>
+            <a name="HRS_REQUEST_PARAMETER_TO_HTTP_HEADER">HRS_REQUEST_PARAMETER_TO_HTTP_HEADER: HTTP Response splitting vulnerability</a>
+        </h2>
+                    
+    <p>This code directly writes an HTTP parameter to an HTTP header, which allows for a HTTP response splitting
+vulnerability. See <a href="http://en.wikipedia.org/wiki/HTTP_response_splitting">http://en.wikipedia.org/wiki/HTTP_response_splitting</a>
+for more information.</p>
+<p>FindBugs looks only for the most blatant, obvious cases of HTTP response splitting.
+If FindBugs found <em>any</em>, you <em>almost certainly</em> have more
+vulnerabilities that FindBugs doesn't report. If you are concerned about HTTP response splitting, you should seriously
+consider using a commercial static analysis or pen-testing tool.
+</p>
+
+
+        
+        <h2>
+            <a name="NM_CONFUSING">NM_CONFUSING: Confusing method names</a>
+        </h2>
+          <p> The referenced methods have names that differ only by capitalization.</p>
+
+    
+        <h2>
+            <a name="NP_NULL_ON_SOME_PATH">NP_NULL_ON_SOME_PATH: Possible null pointer dereference</a>
+        </h2>
+        <p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+</p>
+
+    
+        <h2>
+            <a name="NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE">NP_NULL_ON_SOME_PATH_MIGHT_BE_INFEASIBLE: Possible null pointer dereference on branch that might be infeasible</a>
+        </h2>
+        <p> There is a branch of statement that, <em>if executed,</em>  guarantees that
+a null value will be dereferenced, which
+would generate a <code>NullPointerException</code> when the code is executed.
+Of course, the problem might be that the branch or statement is infeasible and that
+the null pointer exception can't ever be executed; deciding that is beyond the ability of FindBugs.
+Due to the fact that this value had been previously tested for nullness,
+this is a definite possibility.
+</p>
+
+    
+        <h2>
+            <a name="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE">RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE: Redundant nullcheck of value known to be non-null</a>
+        </h2>
+        <p> This method contains a redundant check of a known non-null value against
+the constant null.</p>
+
+    
+        <h2>
+            <a name="SBSC_USE_STRINGBUFFER_CONCATENATION">SBSC_USE_STRINGBUFFER_CONCATENATION: Method concatenates strings using + in a loop</a>
+        </h2>
+        <p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
+
+<p> For example:</p>
+<pre>
+  // This is bad
+  String s = "";
+  for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+  }
+
+  // This is better
+  StringBuffer buf = new StringBuffer();
+  for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+  }
+  String s = buf.toString();
+</pre>
+
+    
+        <h2>
+            <a name="SE_NO_SERIALVERSIONID">SE_NO_SERIALVERSIONID: Class is Serializable, but doesn't define serialVersionUID</a>
+        </h2>
+          <p> This class implements the <code>Serializable</code> interface, but does
+  not define a <code>serialVersionUID</code> field.&nbsp;
+  A change as simple as adding a reference to a .class object
+    will add synthetic fields to the class,
+   which will unfortunately change the implicit
+   serialVersionUID (e.g., adding a reference to <code>String.class</code>
+   will generate a static field <code>class$java$lang$String</code>).
+   Also, different source code to bytecode compilers may use different
+   naming conventions for synthetic variables generated for
+   references to class objects or inner classes.
+   To ensure interoperability of Serializable across versions,
+   consider adding an explicit serialVersionUID.</p>
+
+    
+        <h2>
+            <a name="SS_SHOULD_BE_STATIC">SS_SHOULD_BE_STATIC: Unread field: should this field be static?</a>
+        </h2>
+          <p> This class contains an instance final field that
+   is initialized to a compile-time static value.
+   Consider making the field static.</p>
+
+    
+        <h2>
+            <a name="WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR: Inefficient use of keySet iterator instead of entrySet iterator</a>
+        </h2>
+        <p> This method accesses the value of a Map entry, using a key that was retrieved from
+a keySet iterator. It is more efficient to use an iterator on the entrySet of the map, to avoid the
+Map.get(key) lookup.</p>
+
+        
+    </body>
+</html>
