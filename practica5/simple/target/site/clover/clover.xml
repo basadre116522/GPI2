@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1619448666118" clover="4.2.0">
+   <project name="simple simple" timestamp="1619448657866">
+      <metrics coveredelements="0" complexity="1" loc="15" methods="1" classes="1" statements="2" packages="1" coveredconditionals="0" coveredmethods="0" elements="3" ncloc="9" files="1" conditionals="0" coveredstatements="0"/>
+      <package name="simple">
+         <metrics coveredelements="0" complexity="1" loc="15" methods="1" classes="1" statements="2" coveredconditionals="0" coveredmethods="0" elements="3" ncloc="9" files="1" conditionals="0" coveredstatements="0"/>
+         <file path="/home/alumno/Escritorio/simple/src/main/java/simple/App.java" name="App.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="1" loc="15" coveredmethods="0" methods="1" elements="3" classes="1" ncloc="9" statements="2" conditionals="0" coveredstatements="0"/>
+            <class name="App">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="1" coveredmethods="0" methods="1" elements="3" statements="2" conditionals="0" coveredstatements="0"/>
+            </class>
+            <line complexity="1" visibility="public" signature="main(String[]) : void" num="9" count="0" type="method"/>
+            <line num="11" count="0" type="stmt"/>
+            <line num="12" count="0" type="stmt"/>
+         </file>
+      </package>
+   </project>
+   <testproject name="simple simple" timestamp="1619448657866">
+      <metrics coveredelements="2" complexity="1" loc="20" methods="1" classes="1" statements="1" packages="1" coveredconditionals="0" coveredmethods="1" elements="2" ncloc="11" files="1" conditionals="0" coveredstatements="1"/>
+      <package name="simple">
+         <metrics coveredelements="2" complexity="1" loc="20" methods="1" classes="1" statements="1" coveredconditionals="0" coveredmethods="1" elements="2" ncloc="11" files="1" conditionals="0" coveredstatements="1"/>
+         <file path="/home/alumno/Escritorio/simple/src/test/java/simple/AppTest.java" name="AppTest.java">
+            <metrics coveredelements="2" coveredconditionals="0" complexity="1" loc="20" coveredmethods="1" methods="1" elements="2" classes="1" ncloc="11" statements="1" conditionals="0" coveredstatements="1"/>
+            <class name="AppTest">
+               <metrics coveredelements="2" complexity="1" methods="1" testruns="1" statements="1" coveredconditionals="0" coveredmethods="1" elements="2" testfailures="0" testduration="0.004" conditionals="0" coveredstatements="1" testpasses="1"/>
+            </class>
+            <line complexity="1" visibility="public" signature="shouldAnswerWithTrue() : void" num="15" testsuccess="true" count="1" testduration="0.004" type="method"/>
+            <line num="18" count="1" type="stmt"/>
+         </file>
+      </package>
+   </testproject>
+</coverage>

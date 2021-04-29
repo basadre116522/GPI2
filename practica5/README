@@ -1,0 +1,2 @@
+mvn help:describe -Dplugin=org.jacoco:jacoco-maven-plugin -Ddetail
+https://mkyong.com/maven/maven-jacoco-code-coverage-example/
