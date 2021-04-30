@@ -5,7 +5,7 @@
 
 ### PROJECT_DIR
 ### This is the path to where you have created/cloned your project
-PROJECT_DIR       = $(HOME)/MyArduinoProject
+PROJECT_DIR       = $(HOME)/.jenkins/workspace/ProjectsPipeline/practica5/MyArduinoProject
 
 ### ARDMK_DIR
 ### Path to the Arduino-Makefile directory.
