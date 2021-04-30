@@ -1,6 +1,6 @@
 [submodule "practica5/FooProject/practica5/MyArduinoProject"]
 	path = practica5/FooProject/practica5/MyArduinoProject
 	url = https://github.com/ladislas/Bare-Arduino-Project
-[submodule "practica5/MyArduinoProject2"]
-	path = practica5/MyArduinoProject2
+[submodule "practica5/MyArduinoProject"]
+	path = practica5/MyArduinoProject
 	url = https://github.com/ladislas/Bare-Arduino-Project
